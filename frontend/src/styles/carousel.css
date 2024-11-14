@@ -1,0 +1,170 @@
+/* carousel.css */
+
+/* Carousel container positioned at the center bottom */
+.carousel-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+}
+
+/* Carousel setup */
+.carousel {
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+}
+
+/* Carousel cards */
+.carousel-card {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Slide animations */
+.carousel-card.slide-in {
+    animation: slideIn 0.5s forwards;
+}
+
+.carousel-card.slide-forward {
+    animation: slideForward 0.1s forwards;
+}
+
+.carousel-card.slide-out {
+    animation: slideOut 0.8s forwards;
+}
+
+/* Keyframes */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideForward {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+        filter: blur(2px);
+    }
+
+    100% {
+        transform: translateX(10px);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.carousel-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .carousel-container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .carousel {
+        gap: 5px;
+    }
+
+    .carousel-card {
+        width: 100px;
+        height: 120px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .carousel-container {
+        width: 90%;
+    }
+
+    .carousel-card {
+        width: 120px;
+        height: 140px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .carousel-container {
+        width: 85%;
+    }
+
+    .carousel-card {
+        width: 140px;
+        height: 160px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .carousel-container {
+        width: 80%;
+    }
+
+    .carousel-card {
+        width: 160px;
+        height: 180px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .carousel-container {
+        width: 75%;
+    }
+
+    .carousel-card {
+        width: 180px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,162 @@
+/* navbar.css */
+@font-face {
+    font-family: 'Lavendra', 'Georgia';
+    src: url('../fonts/georgia.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar {
+    background: none;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    box-shadow: none;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    
+}
+
+/* adds a low opacity soild color in nav bar*/
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.logo-container img {
+    height: 70px;
+    width: 80px; /* Adjust to match an oval shape */
+    object-fit: 100%; /* Ensures the image fits inside the oval properly */
+    border-radius: 50%; /* Makes the image a circle */
+    overflow: hidden; /* Ensures anything outside the shape is hidden */
+    margin-top: -10px; /* Adjust the value to move the logo higher */
+}
+
+.logo-container h1 {
+    font-family: 'Lavendra', serif;
+    font-size: 4rem;
+    font-weight: 1000;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    margin-left: 6em;
+    text-align: center;
+    flex: 1;
+}
+
+.navbar-logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Georgia';
+    font-weight: normal;
+    font-size: 20px;
+    transition: color 0.2s ease, transform 0.3s ease;
+    padding: 8px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    color: #ffefcc;
+    border-bottom: 2px solid #333;
+    transform: scale(1.05);
+}
+
+/* Menu icon styles */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* ######################################Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+        top: -2%;
+    }
+
+    .logo-container h1 {
+        font-size: 2.5rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Sidebar styles */
+    .nav-links {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Initially hidden off-screen to the right */
+        height: 100vh;
+        width: 30%;
+        /* Adjust width for sidebar */
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 60px 0;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        /* Smooth slide-in effect */
+        z-index: 1000;
+    }
+
+    /* Show sidebar when active */
+    .nav-links.active {
+        right: 0;
+        /* Slides the sidebar into view */
+    }
+
+    .nav-links a {
+        color: #333;
+        font-size: 18px;
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+        color: #ffefcc;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        /* Place on right to toggle the sidebar */
+        z-index: 1100;
+        /* Higher z-index than sidebar */
+    }
+}

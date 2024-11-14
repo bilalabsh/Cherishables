@@ -1,0 +1,179 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+}
+
+/* Hero section with background image */
+.hero-section {
+    background-image: url('../assets/final.jpg');
+    background-size: cover;
+    background-size: 100%;
+    background-position: top center;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+    /* Smooth transition */
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+
+}
+
+/* Position catalog directly below the hero */
+.catalog-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    transition: transform 0.5s ease;
+    padding-top: 8rem;
+    transform: translateY(100vh);
+    /* Hidden by default */
+    transition: transform 0.8s ease-in-out;
+    /* Smooth transition */
+    margin-top: -100vh;
+    /* Offset to position the catalog below the hero */
+    padding-top: 100vh;
+    /* Ensure full catalog visibility */
+
+}
+
+/* Apply animation when scrolled */
+.homepage.scrolled .hero-section {
+    transform: translateY(-100vh);
+    /* Moves hero up out of view */
+}
+
+.homepage.scrolled .catalog-section {
+    transform: translateY(-100vh);
+    /* Slides catalog section up to cover hero section */
+}
+
+/* Navbar styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Centered Hero Heading */
+.hero-section h1 {
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    font-weight: 1000;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    margin: 0;
+    margin-top: 1rem;
+    /* Small top margin to create slight separation from the top */
+}
+
+.hero-heading {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: light;
+    color: #514848;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    padding-bottom: 2rem;
+    /* Aligns just below the main heading */
+}
+
+/* Catalog section styling */
+.catalog-section {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .hero-section {
+        height: 70vh;
+        /* Adjust for small screens */
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-heading {
+        font-size: 1.2rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-section {
+        height: 80vh;
+        /* Slightly more height for medium screens */
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-heading {
+        font-size: 1.3rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-section {
+        height: 90vh;
+        /* Adjust height as needed */
+    }
+
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-heading {
+        font-size: 1.4rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero-section h1 {
+        font-size: 4rem;
+    }
+
+    .hero-heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hero-section {
+        height: 100vh;
+        /* Full height for large screens */
+    }
+
+    .hero-section h1 {
+        font-size: 4rem;
+    }
+
+    .hero-heading {
+        font-size: 1.5rem;
+    }
+}

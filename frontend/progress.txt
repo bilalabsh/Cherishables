@@ -1,0 +1,10 @@
+28 oct 2024
+umer: i did the homepage 
+someone research and fix this if possible
+major issues:
+1)logo should be merged with the background
+2)background images should feel sync ima help me in this
+minor issues:
+1)responsivess is good but somewhere overlapping occurs not on fixed media queries.
+
+will complete the product catalog raat ko abhi pushing code.
