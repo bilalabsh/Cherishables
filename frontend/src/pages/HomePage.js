@@ -27,13 +27,9 @@ const HomePage = () => {
       <section className="hero-section">
         <h1>Cherishables</h1>
         <h3 className="hero-heading">Hand and Foot in Metals</h3>
-
-        {/* Add Carousel component here */}
-        <Carousel />
+        <ProductCatalog /> {/* Add the product catalog here */}
       </section>
-      <section className="catalog-section">
-        <ProductCatalog />
-      </section>
+      <section className="catalog-section"></section>
     </div>
   );
 };

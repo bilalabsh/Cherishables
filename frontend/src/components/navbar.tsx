@@ -1,57 +1,44 @@
 import React, { useState, useEffect } from "react";
 import "../styles/navbar.css";
+import { FaBars, FaPhone, FaTimes } from "react-icons/fa"; // Import FaPhone for the phone icon
 import { Link } from "react-router-dom";
-import logo from "../assets/logofinal.png";
-import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
 
-    // Initial check
-    handleResize();
-
-    // Add resize listener
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const toggleMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
-
   return (
-    <nav className="navbar">
-      <div className="logo-container">
-        <img src={logo} alt="Cherishables Logo" className="navbar-logo" />
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      {/* Phone icon and number */}
+      <div className="phone">
+        <FaPhone className="phone-icon" />
+        <a href="tel:+92 325 2802878" className="phone-number">
+          +92 325 2802878
+        </a>
       </div>
-      <ul
-        className={`nav-links ${isMobileMenuOpen && isMobile ? "active" : ""}`}
-      >
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-        <Link to="/Gallery">Gallery</Link>
-        </li>
-        <li>
-        <Link to="/Stories">Stories</Link>
-        </li>
-        <li>
-        <Link to="/About">About Us</Link>
-        </li>
-
+      <ul className="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <div className="menu-icon" onClick={toggleMenu}>
-        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+      <div className="menu-icon">
+        <FaBars />
       </div>
     </nav>
   );

@@ -218,3 +218,22 @@ h2 {
         padding: 5px 15px;
     }
 }
+/* Order Now Button */
+.order-now-button {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-now-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}

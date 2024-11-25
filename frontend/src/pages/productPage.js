@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
 import "../styles/productpage.css";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 const ProductPage = () => {
+  // Categories for the products
   const categories = [
     { title: "Newborn", id: "newborn" },
     { title: "Toddler", id: "toddler" },
@@ -11,6 +13,7 @@ const ProductPage = () => {
     { title: "Family", id: "family" },
   ];
 
+  // Authors list for reviews
   const authors = [
     "John D.",
     "Jane S.",
@@ -24,12 +27,13 @@ const ProductPage = () => {
     "Olivia T.",
   ];
 
+  // Product data for each category
   const products = {
     newborn: [
       {
         name: "Newborn Product 1",
         review: "Capturing my baby's first moments was priceless.",
-        image: require("../productimages/P2.jpg"),
+        image: require("../productimages/p9.jpg"),
         author: "Abu Umer",
       },
       {
@@ -64,7 +68,7 @@ const ProductPage = () => {
         author: authors[Math.floor(Math.random() * authors.length)],
       },
     ],
-    // Replicate similar structure for all other categories.
+    // Generating products for other categories dynamically
     toddler: [...Array(6)].map((_, index) => ({
       name: `Toddler Product ${index + 1}`,
       review: "A playful memory of my child's vibrant years.",
@@ -97,9 +101,11 @@ const ProductPage = () => {
     })),
   };
 
+  // State to track which category is expanded
   const [expandedCategory, setExpandedCategory] = useState(null);
   const sectionRefs = useRef({});
 
+  // Toggles the expanded view for a category
   const toggleCategory = (category) => {
     setExpandedCategory((prev) => (prev === category ? null : category));
     if (expandedCategory === category) {
@@ -146,6 +152,11 @@ const ProductPage = () => {
                 </div>
               ))}
           </div>
+          {expandedCategory === id && (
+            <Link to="/order" className="order-now-button">
+              Order Now!
+            </Link>
+          )}
           <button onClick={() => toggleCategory(id)} className="toggle-arrow">
             {expandedCategory === id ? "▲" : "▼"}
           </button>

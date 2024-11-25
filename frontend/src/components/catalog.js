@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/catalog.css";
 import lamine from "../productimages/p1.JPG";
 import foot from "../productimages/p1.JPG";
 import babyHand from "../productimages/p1.JPG";
-import petPaw from "../productimages/p1.JPG";
 
 const ProductCatalog = () => {
   const products = [
@@ -25,15 +24,13 @@ const ProductCatalog = () => {
     {
       id: "Imposed",
       name: "Imposed",
-      price: "$79",
       img: babyHand,
       description: "Capture your baby’s first handprint.",
     },
   ];
 
   return (
-    <div className="catalog-container">
-      <h1 className="catalog-heading">Product Catalog</h1>
+    <div className="hero-catalog">
       <div className="product-card-wrapper">
         {products.map((product) => (
           <div className="product-card" key={product.id}>
@@ -41,7 +38,6 @@ const ProductCatalog = () => {
               <div className="product-card-front">
                 <img src={product.img} alt={product.name} />
                 <h3>{product.name}</h3>
-                <p>{product.price}</p>
               </div>
               <div className="product-card-back">
                 <p>{product.description}</p>
