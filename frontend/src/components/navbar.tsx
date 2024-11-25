@@ -31,11 +31,22 @@ const Navbar = () => {
           +92 325 2802878
         </a>
       </div>
-      <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul
+        className="nav-links"
+      >
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+        <Link to="/gallery">Gallery</Link>
+        </li>
+        <li>
+        <Link to="/stories">Stories</Link>
+        </li>
+        <li>
+        <Link to="/about">About Us</Link>
+        </li>
+
       </ul>
       <div className="menu-icon">
         <FaBars />

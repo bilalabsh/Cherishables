@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar.tsx";
 import ProductCatalog from "../components/catalog";
 import Carousel from "../components/Carousel.tsx"; // Import the Carousel component
+
 import "../styles/homepage.css";
 
 const HomePage = () => {
@@ -30,6 +31,7 @@ const HomePage = () => {
         <ProductCatalog /> {/* Add the product catalog here */}
       </section>
       <section className="catalog-section"></section>
+    
     </div>
   );
 };

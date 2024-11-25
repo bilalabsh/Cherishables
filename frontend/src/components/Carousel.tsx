@@ -14,7 +14,7 @@ const Carousel: React.FC = () => {
     { id: 6, image: require("../productimages/P3.jpg"), title: "Memory Six" },
     { id: 7, image: require("../productimages/P4.jpg"), title: "Memory Seven" },
   ];
-
+  
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setCurrentSlide((prevSlide) =>
