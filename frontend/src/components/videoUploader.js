@@ -28,16 +28,58 @@ const VideoUploader = () => {
             index === 0
               ? "Snapinsta.app_video_8546D61B807673A3EEB85E1D38F6F0BF_video_dashinit_icjvwo"
               : "Snapinsta.app_video_8E459C3BF5C7A6DB2B9EE30202A7A383_video_dashinit_jqytm5",
-          autoplay: { mode: "on-scroll" },
+          autoplay: false,
           quality: "auto", // Automatically optimize quality based on user bandwidth
           format: "mp4", // Use mp4 format for best compatibility
           streaming: true, // Enable adaptive streaming (HLS/DASH)
+          showLogo: false, // Hide Cloudinary logo
         });
       } else {
         console.error(`Video reference not found for video ${index + 1}.`);
       }
     });
   }, []);
+
+  useEffect(() => {
+    const playAndPause = (videoRef) => {
+      if (videoRef.current) {
+        videoRef.current.muted = true; // Mute the video
+        videoRef.current.play().then(() => {
+          setTimeout(() => {
+            videoRef.current.pause();
+            videoRef.current.muted = false; // Unmute the video after pausing
+          }, 10); // Pause after 0.01 seconds
+        });
+      }
+    };
+    videoRefs.forEach(playAndPause);
+  }, [videoRefs]);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      videoRefs.forEach((videoRef) => {
+        if (videoRef.current) {
+          if (document.fullscreenElement) {
+            // If fullscreen is enabled
+            videoRef.current.style.width = "100%";
+            videoRef.current.style.height = "100%";
+            videoRef.current.style.objectFit = "contain"; // Maintain aspect ratio
+          } else {
+            // If fullscreen is disabled
+            videoRef.current.style.width = "600px"; // Reset to original width
+            videoRef.current.style.height = "338px"; // Reset to original height
+            videoRef.current.style.objectFit = "cover"; // Reset to original object-fit
+          }
+        }
+      });
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+  }, [videoRefs]);
 
   return (
     <div style={styles.container}>
@@ -104,11 +146,11 @@ const styles = {
     justifyContent: "center",
   },
   video: {
-    width: "100%",
-    maxWidth: "600px", // Consistent width
-    aspectRatio: "16 / 9", // Force all videos to a 16:9 ratio
+    width: "600px", // Fixed width
+    height: "338px", // Fixed height (16:9 aspect ratio)
     objectFit: "cover", // Crop to fit the dimensions if needed
     borderRadius: "10px",
+    display: "block", // Ensure the video is displayed as a block element
   },
   textBoxWrapper: {
     flex: 1,
@@ -124,7 +166,7 @@ const styles = {
   },
   textBox: {
     width: "100%",
-    height: "200px",
+    height: "250px",
     padding: "10px",
     fontSize: "16px",
     border: "1px solid #ccc",
