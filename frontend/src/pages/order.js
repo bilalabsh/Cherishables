@@ -2,45 +2,54 @@ import React, { useState } from "react";
 import "../styles/order.css";
 
 function Order() {
-  const [buttonState, setButtonState] = useState("default"); // "default", "sending", or "submitted"
+  const [buttonState, setButtonState] = useState("default");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form submitted.");
     setButtonState("sending");
 
-    // Collect form data
     const formData = {
-      fullName: e.target[0].value,
-      surname: e.target[1].value,
-      dob: e.target[2].value,
-      pob: e.target[3].value,
+      fullName: e.target.fullName.value,
+      surname: e.target.surname.value,
+      dob: e.target.dob.value,
+      pob: e.target.pob.value,
       gender: e.target.gender.value,
-      nationality: e.target[6].value,
-      address: e.target[7].value,
+      nationality: e.target.nationality.value,
+      address: e.target.address.value,
       impression: e.target.impression.value,
       base: e.target.base.value,
-      color: e.target.colour.value,
+      color: e.target.color.value,
       writingStyle: e.target.writingStyle.value,
-      designNumber: e.target[13].value,
-      matterToWrite: e.target[14].value,
+      designNumber: e.target.designNumber.value,
+      matterToWrite: e.target.matterToWrite.value,
     };
 
+    console.log("Form data:", formData);
+
     try {
-      // Send data to the backend
+      console.log("Sending form data to server...");
       const response = await fetch("http://localhost:5000", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ formData }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
+      console.log("Received response from server.");
+      console.log("Response status:", response.status);
+
       if (response.ok) {
+        console.log("Form successfully submitted.");
         setButtonState("submitted");
       } else {
-        console.error("Error sending email");
+        const errorText = await response.text();
+        console.error("Failed to submit form. Response text:", errorText);
         setButtonState("default");
       }
     } catch (error) {
-      console.error(error);
+      console.error("An error occurred while submitting the form:", error);
       setButtonState("default");
     }
   };
@@ -55,20 +64,19 @@ function Order() {
           Emotions cannot always be expressed but they can be preserved.
         </p>
 
-        {/* Personal Information Section */}
         <section className="personal-info">
           <h3>Personal Information</h3>
           <div className="form-group">
             <label>Full Name:</label>
-            <input type="text" required />
+            <input type="text" name="fullName" required />
             <label>Surname:</label>
-            <input type="text" required />
+            <input type="text" name="surname" required />
           </div>
           <div className="form-group">
             <label>Date of Birth:</label>
-            <input type="date" required />
+            <input type="date" name="dob" required />
             <label>Place of Birth:</label>
-            <input type="text" required />
+            <input type="text" name="pob" required />
           </div>
           <div className="form-group">
             <label>Gender:</label>
@@ -82,15 +90,14 @@ function Order() {
           </div>
           <div className="form-group">
             <label>Nationality:</label>
-            <input type="text" required />
+            <input type="text" name="nationality" required />
           </div>
           <div className="form-group">
             <label>Address:</label>
-            <textarea required />
+            <textarea name="address" required />
           </div>
         </section>
 
-        {/* Impression Details Section */}
         <section className="impression-details">
           <h3>Details of Personalised Impressions</h3>
           <div className="form-group">
@@ -129,19 +136,16 @@ function Order() {
           <div className="form-group">
             <label>Colour:</label>
             <label>
-              <input type="radio" name="colour" value="Gold" required /> Gold
+              <input type="radio" name="color" value="Gold" required /> Gold
             </label>
             <label>
-              <input type="radio" name="colour" value="Silver" required />{" "}
-              Silver
+              <input type="radio" name="color" value="Silver" required /> Silver
             </label>
             <label>
-              <input type="radio" name="colour" value="Bronze" required />{" "}
-              Bronze
+              <input type="radio" name="color" value="Bronze" required /> Bronze
             </label>
             <label>
-              <input type="radio" name="colour" value="Copper" required />{" "}
-              Copper
+              <input type="radio" name="color" value="Copper" required /> Copper
             </label>
           </div>
           <div className="form-group">
@@ -176,11 +180,11 @@ function Order() {
           </div>
           <div className="form-group">
             <label>Design Number:</label>
-            <input type="text" required />
+            <input type="text" name="designNumber" required />
           </div>
           <div className="form-group">
             <label>Matter to Write:</label>
-            <textarea required />
+            <textarea name="matterToWrite" required />
           </div>
         </section>
 
@@ -197,19 +201,18 @@ function Order() {
           </div>
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className={`submit-button ${buttonState}`}
           disabled={buttonState !== "default"}
         >
-          <span>
-            {buttonState === "default" && "Submit"}
-            {buttonState === "sending" && "Sending..."}
-            {buttonState === "submitted" && "Submitted ✅"}
-          </span>
+          {buttonState === "default" && "Submit"}
+          {buttonState === "sending" && "Sending..."}
+          {buttonState === "submitted" && "Submitted ✅"}
         </button>
       </form>
+      <section>
+      </section>
     </div>
   );
 }

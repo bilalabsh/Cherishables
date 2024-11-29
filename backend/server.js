@@ -1,70 +1,56 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
+import fetch from "node-fetch";
 
 const app = express();
-const PORT = 5000;
 
 // Middleware
-app.use(
-  cors({
-    origin: "http://localhost:3000", // Ensure the frontend URL is specified here
-  })
-);
+app.use(cors());
 app.use(bodyParser.json());
 
-// POST route to handle form data
+console.log("Middleware configured.");
+
+// Handle POST requests to "/"
 app.post("/", async (req, res) => {
-  console.log("Received request:", req.body); // Log request body
-  const { formData } = req.body;
-
-  // Email transport configuration
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "umern.aws@gmail.com", // Your email
-      pass: "sigg nqll invw qbie", // Your email password (use an App Password if using Gmail)
-    },
-  });
-
-  // Email content
-  const mailOptions = {
-    from: "umern.aws@gmail.com",
-    to: "umern.aws@gmail.com", // Recipient email
-    subject: "New Order Receipt",
-    text: `
-      A new order has been submitted with the following details:
-
-      Full Name: ${formData.fullName} ${formData.surname}
-      Date of Birth: ${formData.dob}
-      Place of Birth: ${formData.pob}
-      Gender: ${formData.gender}
-      Nationality: ${formData.nationality}
-      Address: ${formData.address}
-
-      Impression Details:
-      - Impression: ${formData.impression}
-      - Base: ${formData.base}
-      - Color: ${formData.color}
-      - Writing Style: ${formData.writingStyle}
-      - Design Number: ${formData.designNumber}
-      - Matter to Write: ${formData.matterToWrite}
-
-      Thank you for your order!
-    `,
-  };
+  console.log("Received POST request to '/' endpoint.");
+  console.log("Request body:", req.body);
 
   try {
-    await transporter.sendMail(mailOptions);
-    res.status(200).send("Email sent successfully!");
+    const googleScriptURL =
+      "https://script.google.com/macros/s/AKfycbwV7ycLmfQMT6rqO3jtOWEXjngHEGSjBWlaB1KSM9wRtlTYtiDucGkns_DRoArIJPlI/exec";
+
+    console.log("Sending data to Google Apps Script at:", googleScriptURL);
+
+    const response = await fetch(googleScriptURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(req.body),
+    });
+
+    console.log("Received response from Google Apps Script.");
+    console.log("Response status:", response.status);
+
+    const data = await response.json();
+    console.log("Response data:", data);
+
+    res.status(200).json(data);
   } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).send("Failed to send email");
+    console.error("Error in POST request handler:", error);
+    res
+      .status(500)
+      .json({ error: "An error occurred while processing your request." });
   }
 });
 
-// Start server
+// Handle GET requests to "/"
+app.get("/", (req, res) => {
+  console.log("Received GET request to '/' endpoint.");
+  res.status(200).send("Welcome to the CORS Proxy Server!");
+});
+
+// Start the server
+const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`CORS Proxy server running at http://localhost:${PORT}`);
 });
