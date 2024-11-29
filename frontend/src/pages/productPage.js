@@ -1,170 +1,65 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom"; // Import useParams to capture the productId from URL
+import { fetchProducts } from "../services/productService"; // Function to fetch product data
 import "../styles/productpage.css";
-import { Link } from "react-router-dom"; // Import Link for navigation
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
+
 const ProductPage = () => {
-  // Categories for the products
-  const categories = [
-    { title: "Newborn", id: "newborn" },
-    { title: "Toddler", id: "toddler" },
-    { title: "Teenage", id: "teenage" },
-    { title: "Couples", id: "couples" },
-    { title: "Elderly", id: "elderly" },
-    { title: "Family", id: "family" },
-  ];
+  const { productId } = useParams(); // Get the productId from the URL
+  const [productData, setProductData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Authors list for reviews
-  const authors = [
-    "John D.",
-    "Jane S.",
-    "Robert K.",
-    "Emily R.",
-    "Michael B.",
-    "Sarah P.",
-    "David G.",
-    "Sophia W.",
-    "Daniel M.",
-    "Olivia T.",
-  ];
+  // Fetch product data from the local JSON file
+  useEffect(() => {
+    const fetchProductData = async () => {
+      try {
+        const data = await fetchProducts(); // Assuming this fetches the product data from the JSON file
+        // Find the product object matching the productId
+        const product = data.products.find((p) => p.mainCategory === productId);
+        setProductData(product);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      }
+    };
 
-  // Product data for each category
-  const products = {
-    newborn: [
-      {
-        name: "Newborn Product 1",
-        review: "Capturing my baby's first moments was priceless.",
-        image: require("../productimages/p9.jpg"),
-        author: "Abu Umer",
-      },
-      {
-        name: "Newborn Product 2",
-        review: "An irreplaceable keepsake of our baby's tiny hands.",
-        image: require("../productimages/P2.jpg"),
-        author: "Ashu",
-      },
-      {
-        name: "Newborn Product 3",
-        review:
-          "The joy of seeing my baby's tiny imprint every day is unmatched.",
-        image: require("../productimages/P2.jpg"),
-        author: authors[Math.floor(Math.random() * authors.length)],
-      },
-      {
-        name: "Newborn Product 4",
-        review: "A wonderful keepsake that I'll treasure forever.",
-        image: require("../productimages/P2.jpg"),
-        author: authors[Math.floor(Math.random() * authors.length)],
-      },
-      {
-        name: "Newborn Product 5",
-        review: "Perfect way to preserve my baby's tiny hands.",
-        image: require("../productimages/P2.jpg"),
-        author: authors[Math.floor(Math.random() * authors.length)],
-      },
-      {
-        name: "Newborn Product 6",
-        review: "This product brought tears of joy to my eyes.",
-        image: require("../productimages/P2.jpg"),
-        author: authors[Math.floor(Math.random() * authors.length)],
-      },
-    ],
-    // Generating products for other categories dynamically
-    toddler: [...Array(6)].map((_, index) => ({
-      name: `Toddler Product ${index + 1}`,
-      review: "A playful memory of my child's vibrant years.",
-      image: require("../productimages/P2.jpg"),
-      author: authors[Math.floor(Math.random() * authors.length)],
-    })),
-    teenage: [...Array(6)].map((_, index) => ({
-      name: `Teenage Product ${index + 1}`,
-      review: "A meaningful way to preserve their teenage years.",
-      image: require("../productimages/P2.jpg"),
-      author: authors[Math.floor(Math.random() * authors.length)],
-    })),
-    couples: [...Array(6)].map((_, index) => ({
-      name: `Couples Product ${index + 1}`,
-      review: "This symbolizes our love and togetherness.",
-      image: require("../productimages/P2.jpg"),
-      author: authors[Math.floor(Math.random() * authors.length)],
-    })),
-    elderly: [...Array(6)].map((_, index) => ({
-      name: `Elderly Product ${index + 1}`,
-      review: "A lasting memory of their wise, caring hands.",
-      image: require("../productimages/P2.jpg"),
-      author: authors[Math.floor(Math.random() * authors.length)],
-    })),
-    family: [...Array(6)].map((_, index) => ({
-      name: `Family Product ${index + 1}`,
-      review: "A beautiful way to capture our family bond.",
-      image: require("../productimages/P2.jpg"),
-      author: authors[Math.floor(Math.random() * authors.length)],
-    })),
-  };
+    fetchProductData();
+  }, [productId]); // Re-run when productId changes (i.e., when the user navigates to another product)
 
-  // State to track which category is expanded
-  const [expandedCategory, setExpandedCategory] = useState(null);
-  const sectionRefs = useRef({});
+  if (loading) {
+    return <div>Loading...</div>; // Display a loading message while the data is being fetched
+  }
 
-  // Toggles the expanded view for a category
-  const toggleCategory = (category) => {
-    setExpandedCategory((prev) => (prev === category ? null : category));
-    if (expandedCategory === category) {
-      setTimeout(() => {
-        sectionRefs.current[category]?.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
-      }, 300);
-    }
-  };
+  if (!productData) {
+    return <div>Product not found!</div>; // Handle the case where the product is not found
+  }
 
   return (
-    <div className="page-container">
-      <h1>Hand Impression Products</h1>
-      {categories.map(({ title, id }) => (
-        <section
-          key={id}
-          ref={(el) => (sectionRefs.current[id] = el)}
-          className="category-section"
-        >
-          <h2>{title}</h2>
-          <div
-            className={`products-container ${
-              expandedCategory === id ? "expanded" : ""
-            }`}
-          >
-            {products[id]
-              .slice(0, expandedCategory === id ? products[id].length : 3)
-              .map((product, index) => (
-                <div key={index} className="product-card">
-                  <div className="card-inner">
-                    <div className="card-front">
-                      <img
-                        src={product.image}
-                        alt={`Product ${product.name}`}
-                      />
-                    </div>
-                    <div className="card-back">
-                      <p>{product.review}</p>
-                      <span className="author">~ {product.author}</span>
-                    </div>
+    <div className="product-page-container">
+      <h1>{productData.mainCategory} Products</h1>
+      {Object.keys(productData.subCategories).map((category) => (
+        <section key={category} className="category-section">
+          <h2>{category}</h2>
+          <div className="products-container">
+            {productData.subCategories[category].map((product) => (
+              <div key={product.id} className="product-card">
+                <div className="card-inner">
+                  <div className="card-front">
+                    <img src={product.image} alt={product.name} />
+                  </div>
+                  <div className="card-back">
+                    <p>{product.description}</p>
+                    <p>Price: {product.price}</p>
+                    <p>Review: {product.review}</p>
+                    <p>By: {product.author}</p>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
-          {expandedCategory === id && (
-            <Link to="/order" className="order-now-button">
-              Order Now!
-            </Link>
-          )}
-          <button onClick={() => toggleCategory(id)} className="toggle-arrow">
-            {expandedCategory === id ? "▲" : "▼"}
-          </button>
         </section>
       ))}
-      <section>
-        <Footer />
-      </section>
+      <Footer />
     </div>
   );
 };

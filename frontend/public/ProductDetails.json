@@ -1,0 +1,154 @@
+{
+  "products": [
+    {
+      "mainCategory": "2D",
+      "subCategories": {
+        "newborn": [
+          {
+            "id": "2D-newborn-1",
+            "name": "2D Newborn Product 1",
+            "price": "$50",
+            "description": "Beautiful 2D hand impression for newborns.",
+            "image": "/images/p2.jpg",
+            "review": "Perfect for capturing my baby's early days.",
+            "author": "John D."
+          },
+          {
+            "id": "2D-newborn-2",
+            "name": "2D Newborn Product 2",
+            "price": "$60",
+            "description": "A classic keepsake for newborns.",
+            "image": "/images/2d_newborn_2.jpg",
+            "review": "A wonderful keepsake for parents.",
+            "author": "Jane S."
+          }
+        ],
+        "toddler": [
+          {
+            "id": "2D-toddler-1",
+            "name": "2D Toddler Product 1",
+            "price": "$70",
+            "description": "A 2D hand impression of your toddler's playful hands.",
+            "image": "/images/2d_toddler_1.jpg",
+            "review": "The perfect gift for our toddler's milestone moments.",
+            "author": "Alice P."
+          },
+          {
+            "id": "2D-toddler-2",
+            "name": "2D Toddler Product 2",
+            "price": "$80",
+            "description": "A keepsake capturing your toddler's adorable handprints.",
+            "image": "/images/2d_toddler_2.jpg",
+            "review": "A lovely way to preserve my toddler's precious hands.",
+            "author": "Michael T."
+          }
+        ],
+        "teenage": [
+          {
+            "id": "2D-teenage-1",
+            "name": "2D Teenage Product 1",
+            "price": "$100",
+            "description": "A 2D hand impression of your teenage child.",
+            "image": "/images/2d_teenage_1.jpg",
+            "review": "A great way to cherish my teen's growth.",
+            "author": "Sophia M."
+          },
+          {
+            "id": "2D-teenage-2",
+            "name": "2D Teenage Product 2",
+            "price": "$110",
+            "description": "A keepsake of your teenager’s hand in a beautiful 2D impression.",
+            "image": "/images/2d_teenage_2.jpg",
+            "review": "Capturing my teen’s essence in a timeless way.",
+            "author": "David G."
+          }
+        ]
+      }
+    },
+    {
+      "mainCategory": "3D",
+      "subCategories": {
+        "newborn": [
+          {
+            "id": "3D-newborn-1",
+            "name": "3D Newborn Product 1",
+            "price": "$120",
+            "description": "A 3D hand impression for your newborn.",
+            "image": "/images/p3.jpg",
+            "review": "A precious memory captured in 3D.",
+            "author": "Grace W."
+          },
+          {
+            "id": "3D-newborn-2",
+            "name": "3D Newborn Product 2",
+            "price": "$130",
+            "description": "A 3D hand impression of your newborn's delicate hands.",
+            "image": "/images/p5.jpg",
+            "review": "An unforgettable 3D memory of my baby's first moments.",
+            "author": "Sophia T."
+          }
+        ],
+        "toddler": [
+          {
+            "id": "3D-toddler-1",
+            "name": "3D Toddler Product 1",
+            "price": "$130",
+            "description": "3D hand impression for toddlers.",
+            "image": "/images/3d_toddler_1.jpg",
+            "review": "Amazing 3D capture of my toddler’s hands.",
+            "author": "Liam H."
+          }
+        ],
+        "teenage": [
+          {
+            "id": "3D-teenage-1",
+            "name": "3D Teenage Product 1",
+            "price": "$150",
+            "description": "A beautiful 3D keepsake of your teen’s handprint.",
+            "image": "/images/3d_teenage_1.jpg",
+            "review": "A beautiful way to remember my teen's growth.",
+            "author": "Emma R."
+          }
+        ]
+      }
+    },
+    {
+      "mainCategory": "Imposed",
+      "subCategories": {
+        "newborn": [
+          {
+            "id": "Imposed-newborn-1",
+            "name": "Imposed Newborn Product 1",
+            "price": "$40",
+            "description": "Capture your newborn’s handprint in a beautiful imposed format.",
+            "image": "/images/imposed_newborn_1.jpg",
+            "review": "A cherished keepsake for the first few weeks of life.",
+            "author": "Olivia S."
+          }
+        ],
+        "toddler": [
+          {
+            "id": "Imposed-toddler-1",
+            "name": "Imposed Toddler Product 1",
+            "price": "$50",
+            "description": "Imposed handprint keepsake of your toddler.",
+            "image": "/images/imposed_toddler_1.jpg",
+            "review": "A lovely way to preserve my toddler's handprint.",
+            "author": "Charlotte B."
+          }
+        ],
+        "teenage": [
+          {
+            "id": "Imposed-teenage-1",
+            "name": "Imposed Teenage Product 1",
+            "price": "$75",
+            "description": "An imposed handprint impression of your teenager.",
+            "image": "/images/imposed_teenage_1.jpg",
+            "review": "A keepsake to treasure forever.",
+            "author": "James C."
+          }
+        ]
+      }
+    }
+  ]
+}
