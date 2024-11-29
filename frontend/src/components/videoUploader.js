@@ -85,6 +85,11 @@ const VideoUploader = () => {
     <div style={styles.container}>
       {/* First Video and Text Box */}
       <div style={styles.section}>
+        <div style={styles.textBoxWrapper}>
+          <h2 style={styles.heading}>The Journey of Cherishables</h2>
+          <h1 style={styles.h3}>Every cherished memory begins with a story. Ours started with a simple idea—to capture the most tender, intimate moments in a way that lasts forever. Watch how our journey unfolded, and discover how we transform the essence of your most precious memories into beautiful, lasting keepsakes." </h1>
+
+        </div>
         <div style={styles.videoWrapper}>
           <video
             ref={videoRefs[0]}
@@ -93,30 +98,20 @@ const VideoUploader = () => {
             style={styles.video}
           />
         </div>
-        <div style={styles.textBoxWrapper}>
-          <h2 style={styles.heading}>HOW IT ALL STARTED</h2>
-          <textarea
-            style={styles.textBox}
-            placeholder="Write your story here..."
-          />
-        </div>
       </div>
 
       {/* Second Video and Text Box */}
       <div style={styles.section}>
+        <div style={styles.textBoxWrapper}>
+          <h2 style={styles.heading}>A Mother's Love, Immortalized: The Story Behind the Keepsake</h2>
+          <h1 style={styles.h3}>Watch as we bring to life the cherished memory of a 6-month-old's tiny hand, preserved in both 2D and 3D artistry. This keepsake isn't just a decoration; it's a testament to the moments that shape our lives, captured by Cherishables to be treasured forever." </h1>
+        </div>
         <div style={styles.videoWrapper}>
           <video
             ref={videoRefs[1]}
             data-cld-public-id="Snapinsta.app_video_8E459C3BF5C7A6DB2B9EE30202A7A383_video_dashinit_jqytm5"
             controls
             style={styles.video}
-          />
-        </div>
-        <div style={styles.textBoxWrapper}>
-          <h2 style={styles.heading}>YOUR NEXT CHAPTER</h2>
-          <textarea
-            style={styles.textBox}
-            placeholder="Write your story here..."
           />
         </div>
       </div>
@@ -135,15 +130,15 @@ const styles = {
   },
   section: {
     display: "flex",
-    justifyContent: "center",
-    alignItems: "flex-start",
-    gap: "30px", // Space between video and text box
+    flexDirection: "column", // Stack text box above video
+    alignItems: "center",
+    gap: "30px", // Space between text box and video
     width: "100%",
   },
   videoWrapper: {
-    flex: 1,
     display: "flex",
     justifyContent: "center",
+    width: "100%", // Ensure the video wrapper takes full width
   },
   video: {
     width: "600px", // Fixed width
@@ -153,10 +148,10 @@ const styles = {
     display: "block", // Ensure the video is displayed as a block element
   },
   textBoxWrapper: {
-    flex: 1,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    width: "100%", // Ensure the text box wrapper takes full width
   },
   heading: {
     fontSize: "24px",
@@ -164,8 +159,18 @@ const styles = {
     marginBottom: "10px",
     textAlign: "center",
   },
+  h3: {
+    fontSize: "18px",
+    fontWeight: "bold",
+    marginBottom: "8px",
+    textAlign: "center",
+    color: "#666", // Dark gray color for better readability
+    paddingBottom: "5px", // Space between text and the border
+    borderBottom: "3px solid #ddd",
+    
+  },
   textBox: {
-    width: "100%",
+    width: "50%",
     height: "250px",
     padding: "10px",
     fontSize: "16px",
@@ -174,5 +179,4 @@ const styles = {
     resize: "none",
   },
 };
-
 export default VideoUploader;

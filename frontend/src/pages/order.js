@@ -186,12 +186,14 @@ function Order() {
 
         <div className="signatures">
           <div>
-            <p>Customer Signature</p>
             <hr />
+            <br/>
+            <p>Customer Signature</p>
           </div>
           <div>
-            <p>Cherishables Desk</p>
             <hr />
+            <br/>
+            <p>Cherishables Desk</p>
           </div>
         </div>
 

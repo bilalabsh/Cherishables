@@ -33,10 +33,10 @@ body {
 
 .form-title {
     text-align: center;
-    font-family: 'Georgia', serif;
+    font-family: 'Raleway-Bold';
     color: #558a55;
     margin: 0;
-    font-size: 2rem;
+    font-size: rem;
     /* Increased font size */
 }
 
@@ -61,21 +61,24 @@ h2 {
     text-align: center;
     font-style: italic;
     color: #666;
+    padding-bottom: 20px;
 }
 
 h3 {
     color: #800080;
     font-size: 1.2rem;
+    padding-bottom: 20px;
     /* Slightly larger font size */
     margin-bottom: 10px;
     text-decoration: underline;
     /* Emphasize section headings */
+    
 }
 
 .form-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     /* Increased gap for better spacing */
     margin-bottom: 15px;
     align-items: center;
@@ -83,9 +86,9 @@ h3 {
 }
 
 .form-group label {
-    min-width: 120px;
+    min-width: 115px;
     /* Increased minimum width for label alignment */
-    flex: 1;
+    flex: 0;
     font-weight: bold;
     /* Make labels stand out */
     color: #333;
@@ -118,9 +121,10 @@ textarea {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-    padding-top: 10px;
+    padding-top: 70px;
     border-top: 2px solid #ccc;
     /* Separate signature area visually */
+    
 }
 
 .signatures div {
@@ -128,6 +132,7 @@ textarea {
     width: 45%;
     font-weight: bold;
     /* Bold for better emphasis */
+    padding-bottom: 20px;
 }
 
 hr {

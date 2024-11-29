@@ -73,7 +73,7 @@
 
 /* Centered Hero Heading */
 .hero-section h1 {
-    font-family: 'Georgia', serif;
+    font-family: 'Raleway-Bold';
     font-size: 4rem;
     font-weight: 1000;
     text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
@@ -84,7 +84,7 @@
 }
 
 .hero-heading {
-    font-family: 'Georgia', serif;
+    font-family: 'Raleway-Bold';
     font-size: 1.5rem;
     font-weight: light;
     color: #514848;
