@@ -79,6 +79,7 @@
     /* Adjusted size for smaller card */
     height: 80%;
     object-fit: contain;
+    padding-top: 10px;
 }
 
 .product-card h3 {
