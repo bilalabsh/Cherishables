@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../styles/productpage.css";
 import { Link } from "react-router-dom"; // Import Link for navigation
-
+import Footer from "../components/Footer"
 const ProductPage = () => {
   // Categories for the products
   const categories = [
@@ -162,6 +162,9 @@ const ProductPage = () => {
           </button>
         </section>
       ))}
+      <section>
+        <Footer />
+      </section>
     </div>
   );
 };
