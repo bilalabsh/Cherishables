@@ -1,12 +1,50 @@
 import React, { useEffect, useState } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import Navbar from "../components/navbar.tsx";
 import ProductCatalog from "../components/catalog";
-import Carousel from "../components/Carousel.tsx"; // Import the Carousel component
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 import "../styles/homepage.css";
 
 const HomePage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const getRatio = (el) =>
+      window.innerHeight / (window.innerHeight + el.offsetHeight);
+
+    gsap.utils.toArray("section.parallax-section").forEach((section, i) => {
+      const bg = section.querySelector(".bg");
+
+      // Add random images to each section background
+      bg.style.backgroundImage = `url(https://picsum.photos/1600/800?random=${i})`;
+
+      // Use translateY for smoother animations
+      gsap.fromTo(
+        bg,
+        {
+          y: () => (i ? -window.innerHeight * getRatio(section) : 0), // Start position
+        },
+        {
+          y: () => window.innerHeight * (1 - getRatio(section)), // End position
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: () => (i ? "top bottom" : "top top"),
+            end: "bottom top",
+            scrub: true,
+            invalidateOnRefresh: true, // Recalculate on resize
+          },
+        }
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill()); // Cleanup on unmount
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,11 +64,17 @@ const HomePage = () => {
     <div className={`homepage ${isScrolled ? "scrolled" : ""}`}>
       <Navbar />
       <section className="hero-section">
-        <h1>Cherishables</h1>
-        <h3 className="hero-heading">Hand and Foot in Metals</h3>
-        <ProductCatalog /> {/* Add the product catalog here */}
+        
+          <h1>Cherishables</h1>
+          <h3 className="hero-heading">Hand and Foot in Metals</h3>
+          <ProductCatalog />
       </section>
-      <section className="catalog-section"></section>
+      {/* Parallax sections */}
+      <section className="parallax-section">
+        <div className="bg"></div>
+        <h1>Simple parallax sections</h1>
+      </section>
+
       <section>
         <Footer />
       </section>

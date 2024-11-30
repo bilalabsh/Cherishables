@@ -25,13 +25,10 @@
     text-align: center;
     color: #ffffff;
     box-sizing: border-box;
-    transition: transform 0.5s ease-in-out;
-    /* Smooth transition */
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     flex-shrink: 0;
-
 }
 
 /* Position catalog directly below the hero */
@@ -39,28 +36,32 @@
     width: 100%;
     min-height: 100vh;
     background-color: #ffffff;
-    transition: transform 0.5s ease;
     padding-top: 8rem;
-    transform: translateY(100vh);
-    /* Hidden by default */
-    transition: transform 0.8s ease-in-out;
-    /* Smooth transition */
-    margin-top: -100vh;
-    /* Offset to position the catalog below the hero */
-    padding-top: 100vh;
-    /* Ensure full catalog visibility */
-
+    margin: 0;
 }
 
-/* Apply animation when scrolled */
-.homepage.scrolled .hero-section {
-    transform: translateY(-100vh);
-    /* Moves hero up out of view */
+/* Parallax sections */
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
 }
 
-.homepage.scrolled .catalog-section {
-    transform: translateY(-100vh);
-    /* Slides catalog section up to cover hero section */
+.parallax-section .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 /* Navbar styling */
@@ -80,7 +81,6 @@
     color: #ffffff;
     margin: 0;
     margin-top: 1rem;
-    /* Small top margin to create slight separation from the top */
 }
 
 .hero-heading {
@@ -90,7 +90,6 @@
     color: #514848;
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
     padding-bottom: 2rem;
-    /* Aligns just below the main heading */
 }
 
 /* Catalog section styling */
@@ -107,7 +106,6 @@
 @media (max-width: 575.98px) {
     .hero-section {
         height: 70vh;
-        /* Adjust for small screens */
     }
 
     .hero-section h1 {
@@ -123,7 +121,6 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
     .hero-section {
         height: 80vh;
-        /* Slightly more height for medium screens */
     }
 
     .hero-section h1 {
@@ -139,7 +136,6 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
     .hero-section {
         height: 90vh;
-        /* Adjust height as needed */
     }
 
     .hero-section h1 {
@@ -166,7 +162,6 @@
 @media (min-width: 1200px) {
     .hero-section {
         height: 100vh;
-        /* Full height for large screens */
     }
 
     .hero-section h1 {

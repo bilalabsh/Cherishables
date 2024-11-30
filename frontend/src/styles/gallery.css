@@ -1,0 +1,106 @@
+/* Overall Gallery Styling */
+.gallery-container {
+    padding: 20px;
+    background-size: cover;
+}
+
+.gallery-title {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+/* Category Block Styling */
+.category-block {
+    margin-bottom: 30px;
+}
+
+.category-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Product List Styling */
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Product Card Styling */
+.product-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-name {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.product-price {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0 0 10px;
+}
+
+.product-description {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.loading {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+}
+
+.see-more-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.see-more-btn {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.see-more-btn:hover {
+    background-color: #004085;
+}
