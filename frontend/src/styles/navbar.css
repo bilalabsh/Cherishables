@@ -5,13 +5,10 @@
     justify-content: space-between;
     padding: 0 20px;
     background-color: transparent;
-    /* Initially transparent */
     height: 60px;
     position: absolute;
-    /* Initially absolute */
     top: 0;
     width: 100%;
-    /* Ensure it spans the full width */
     z-index: 1000;
     transition: background-color 0.5s ease, backdrop-filter 0.5s ease, box-shadow 0.5s ease, top 0.3s ease;
 }
@@ -19,15 +16,10 @@
 /* Scrolled state for navbar */
 .navbar.scrolled {
     background-color: rgba(137, 122, 122, 0.9);
-    /* Light background when scrolled */
     backdrop-filter: blur(10px);
-    /* Adds blur effect */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Adds subtle shadow */
     position: sticky;
-    /* Changes position to sticky */
     top: 0;
-    /* Ensures it sticks to the top */
 }
 
 /* Navigation links */
@@ -37,9 +29,7 @@
     padding: 0;
     margin: 0;
     gap: 20px;
-    /* Space between links */
     justify-content: flex-end;
-    /* Align links to the right */
     flex: 1;
 }
 
@@ -50,7 +40,6 @@
 .nav-links li a {
     text-decoration: none;
     color: #fff;
-    /* White for visibility on the background image */
     font-size: 16px;
     font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -58,79 +47,68 @@
 
 .nav-links li a:hover {
     color: #007bff;
-    /* Highlight link color */
     transform: scale(1.05);
-    /* Slight scaling effect */
 }
 
-/* Menu icon */
-.menu-icon {
-    cursor: pointer;
-    font-size: 24px;
-    color: #fff;
-    /* Matches initial link color */
-    display: none;
-    /* Hidden on larger screens */
-}
-
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        /* Hidden initially */
-    }
-
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: rgba(166, 165, 165, 0.9);
-        /* Background for mobile menu */
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu-icon {
-        display: block;
-        /* Show menu icon on mobile */
-    }
-}
 /* Phone section styling */
 .phone {
     display: flex;
     align-items: center;
     gap: 8px;
-    /* Space between icon and number */
     color: #fff;
-    /* Match the initial link color */
     font-size: 16px;
     font-weight: 500;
 }
 
-.phone-icon {
+.phone-icon-1 {
     font-size: 20px;
-    /* Size of the phone icon */
 }
 
 .phone-number {
     text-decoration: none;
     color: #fff;
-    /* Match the initial link color */
     transition: color 0.3s ease;
 }
 
 .phone-number:hover {
     color: #007bff;
-    /* Highlight on hover */
-}
-
-/* Adjust for mobile view */
-@media (max-width: 768px) {
-    .phone {
+}/* Hide desktop navbar for smaller screens */
+/* Hide desktop navbar for smaller screens */
+@media (max-width: 1024px) {
+    .nav-links {
         display: none;
-        /* Hide phone section on smaller screens */
+    }
+    .phone-icon{
+        display: none;
+    }
+    .phone-number{
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: rgba(137, 122, 122, 0.8);
+        backdrop-filter: blur(20px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px;
+        box-shadow: -4px 0 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links .phone {
+        margin-top: auto;
     }
 }

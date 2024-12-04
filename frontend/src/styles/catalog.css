@@ -6,38 +6,46 @@
     justify-content: flex-end;
     width: 100%;
     height: 100%;
-    padding-bottom: 0.rem;
     box-sizing: border-box;
+    position: relative;
 }
 
 /* Product card wrapper adjustment for the hero-catalog */
-.hero-catalog .product-card-wrapper {
+.product-card-wrapper {
     display: flex;
-    gap: 1em;
+    gap: 0.7em;
+    /* Slightly reduced spacing for compact layout */
     justify-content: center;
     flex-wrap: wrap;
-    width: 60%;
-    max-width: 1200px;
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    position: absolute;
+    bottom: 0.5%;
 }
 
-/* Product card - Adjust card size here */
+/* Product card */
 .product-card {
+    perspective: 400px;
+    width: 60px;
+    /* Compact width */
+    height: 75px;
+    /* Reduced height */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Blue border */
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: relative;
 }
 
 /* Inner card adjustment */
 .product-card-inner {
-    position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
+    /* Full height for smaller cards */
     transform-style: preserve-3d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: transform 0.6s ease-in-out;
 }
 
 .product-card:hover .product-card-inner {
@@ -47,15 +55,52 @@
 /* Card front and back */
 .product-card-front,
 .product-card-back {
-    position: absolute;
     width: 100%;
-    height: 70%;
-    transform: translateY(20px);
+    height: 100%;
+    position: absolute;
     backface-visibility: hidden;
-    border-radius: 8px;
+    border-radius: 3px;
+    /* Slightly rounded corners */
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.1rem;
     transition: box-shadow 0.3s ease;
+}
+
+/* Card front styling */
+.product-card-front {
+    background-color: #8f665191;
+    backdrop-filter: blur(3px);
+}
+
+.product-card-front img {
+    width: 100%;
+    /* Fill the card width */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: contain;
+    margin-bottom: 0.1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    /* Fill the smaller card with readable text */
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Card back styling */
+.product-card-back {
+    background-color: #8f665191;
+    color: #fff;
+    padding: 0.2rem;
+    transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,64 +108,25 @@
     text-align: center;
 }
 
-/* Card front styling */
-.product-card-front {
-    background-color: rgba(255, 255, 255, 0.121);
-    /* Semi-transparent red */
-    backdrop-filter: blur(10px);
-    /* Apply blur effect */
-    padding: 0.1rem;
-    /* Keep other existing styles */
-    border-radius: 8px;
-    overflow: hidden;
-}
-.product-card-front img {
-    width: 80%;
-    /* Adjusted size for smaller card */
-    height: 80%;
-    object-fit: contain;
-    padding-top: 10px;
-}
-
-.product-card h3 {
-    font-size: 1rem;
-    /* Adjusted font size */
-    font-weight: bold;
-    color: #333;
-    margin: 0.1rem 0;
-}
-
 .product-card p {
-    font-size: 1rem;
-    /* Adjusted font size */
-    color: #666;
-    margin: 0;
-}
-
-/* Card back styling */
-.product-card-back {
-    background-color: #333;
+    font-size: 0.9rem;
+    /* Ensure readable font size */
     color: #fff;
-    padding: 0.1rem;
-    transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.2rem;
-    /* Adjusted font size */
+    margin: 0.1rem 0;
 }
 
 /* View Catalogue button */
 .view-catalogue-button {
-    background-color: #828487;
+    background-color: #000000;
     color: #ffffff;
-    padding: 0.4rem 0.3rem;
+    padding: 0.15rem 0.3rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 3px;
     cursor: pointer;
     font-size: 1rem;
+    /* Smaller button font */
     font-weight: bold;
+    margin-top: 0.2rem;
 }
 
 .view-catalogue-button:hover {

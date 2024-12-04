@@ -1,76 +1,63 @@
+/* General Styling */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    color: #333;
-    background-image: url('../assets/catalog.jpg');
-    /* Replace with your image URL */
-    background-size: cover;
-    /* Ensures the image covers the whole viewport */
-    background-attachment: fixed;
-    /* Keeps the image fixed while scrolling */
-    background-position: center;
-    /* Centers the image */
-    background-repeat: no-repeat;
-    /* Prevents repeating of the image */
+    background-image: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
+    color: #444;
+    line-height: 1.6;
 }
 
-
 /* Page Container */
-.page-container {
+.product-page-container {
     text-align: center;
     margin: 0 auto;
     padding: 20px;
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 /* Headings */
 h1 {
-    font-size: 2.5em;
-    color: #444;
+    font-size: 3em;
     margin-bottom: 30px;
-    font-family: 'Georgia', serif;
+    font-family: 'Playfair Display', serif;
+    color: #5a4d4d;
+    letter-spacing: 2px;
 }
 
 h2 {
-    font-size: 1.8em;
-    color: #555;
+    font-size: 2em;
     margin: 15px 0;
-    font-family: 'Georgia', serif;
-    background: linear-gradient(to right, #555, #888);
+    background: linear-gradient(to right, #7b5d4d, #d9c3a3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Category Section */
 .category-section {
-    margin: 30px 0;
-    padding: 25px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0);
-    /* Semi-transparent white */
-    backdrop-filter: blur(5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid #e2d1c3;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Products Container */
+/* Smooth Expand/Collapse */
 .products-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    overflow: hidden;
-    transition: max-height 0.75s ease, padding 0.75s ease;
+    gap: 30px;
+    justify-content: center;
     max-height: 300px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0);
-    /* Semi-transparent white */
-    backdrop-filter: blur(5px);
-    /* Adds a blur effect */
-    border-radius: 8px;
-    /* Optional: Matches the rounded look */
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 1;
 }
+
 .products-container.expanded {
     max-height: 1000px;
+    opacity: 1;
 }
 
 /* Product Card */
@@ -78,17 +65,18 @@ h2 {
     perspective: 1000px;
     flex: 0 1 calc(30% - 10px);
     position: relative;
-    height: 240px;
+    height: 260px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: visible;
-    /* Allow scaling to extend beyond container */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #fff4e6, #ffe6e1);
+    border: 2px solid #f3d6c6;
 }
 
 .product-card:hover {
-    z-index: 10;
-    /* Ensure the scaled card is above others */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.08);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Card Inner */
@@ -97,143 +85,131 @@ h2 {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    transition: transform 0.8s ease-in-out;
 }
 
 .product-card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
-/* Card Front and Back - Unified Styling */
-.card-front,
+/* Card Front */
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Back */
 .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: linear-gradient(to bottom, #ffe6e1, #fff4e6);
+    border-radius: 12px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Card Front */
-.card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    border-radius: 8px;
-}
-
-/* Card Back */
-.card-back {
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
     transform: rotateY(180deg);
-    flex-direction: column;
 }
 
-.card-back p {
-    font-size: 16px;
+/* Styling the Review */
+.review-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
     font-style: italic;
-    line-height: 1.5;
-    color: #666;
-    margin: 0;
-    font-family: 'Georgia', serif;
-    padding: 15px;
+    color: #6d4c41;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 15px;
     position: relative;
+    display: inline-block;
 }
 
-/* Quotation Marks */
-.card-back p::before {
-    content: "“";
-    font-size: 30px;
-    color: #bbb;
+.review-quote::before {
+    content: '“';
+    font-size: 2em;
+    color: #c77f7f;
     position: absolute;
     top: -10px;
-    left: -15px;
+    left: -20px;
 }
 
-.card-back p::after {
-    content: "”";
-    font-size: 30px;
-    color: #bbb;
+.review-quote::after {
+    content: '”';
+    font-size: 2em;
+    color: #c77f7f;
     position: absolute;
     bottom: -10px;
-    right: -15px;
+    right: -20px;
 }
-
-/* Customer Name */
-.card-back .author {
-    font-size: 14px;
-    color: #888;
-    font-style: normal;
+.author {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #7c5e44;
+    margin-top: 15px;
     font-weight: bold;
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
-/* Toggle Arrow */
+/* Category Controls */
+.category-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Toggle Button */
 .toggle-arrow {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 25px;
-    background-color: #007bff;
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #a47861;
     color: white;
     border: none;
-    border-radius: 50px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 18px;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .toggle-arrow:hover {
-    background-color: #0056b3;
+    background-color: #6d4c41;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .product-card {
-        flex: 0 1 calc(45% - 10px);
-    }
-
-    .toggle-arrow {
-        font-size: 14px;
-        padding: 8px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .product-card {
-        flex: 0 1 calc(100% - 10px);
-    }
-
-    .toggle-arrow {
-        font-size: 12px;
-        padding: 5px 15px;
-    }
-}
 /* Order Now Button */
 .order-now-button {
     display: inline-block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background-color: #28a745;
+    padding: 12px 30px;
+    background-color: #f5b942;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.4s ease, transform 0.4s ease;
 }
 
 .order-now-button:hover {
-    background-color: #218838;
-    transform: scale(1.05);
+    background-color: #d89036;
+    transform: scale(1.1);
 }
