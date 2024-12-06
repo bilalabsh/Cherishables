@@ -8,17 +8,21 @@
     height: 100%;
     box-sizing: border-box;
     position: relative;
-}
+    transform: scale(0.8); /* Scales down to 80% */
+    transform-origin: center; /* Shrinks from the center */
+    }
+    
+
+
 
 /* Product card wrapper adjustment for the hero-catalog */
 .product-card-wrapper {
     display: flex;
-    gap: 0.7em;
+    gap: 1em;
     /* Slightly reduced spacing for compact layout */
     justify-content: center;
     flex-wrap: wrap;
     width: 50%;
-    max-width: 600px;
     height: auto;
     position: absolute;
     bottom: 0.5%;
@@ -27,9 +31,9 @@
 /* Product card */
 .product-card {
     perspective: 400px;
-    width: 60px;
+    width: 100px;
     /* Compact width */
-    height: 75px;
+    height: 100px;
     /* Reduced height */
     display: flex;
     align-items: center;
@@ -79,7 +83,7 @@
 }
 
 .product-card-front img {
-    width: 100%;
+    width: 80%;
     /* Fill the card width */
     height: auto;
     /* Maintain aspect ratio */
@@ -98,7 +102,7 @@
 /* Card back styling */
 .product-card-back {
     background-color: #8f665191;
-    color: #fff;
+    color: #885555;
     padding: 0.2rem;
     transform: rotateY(180deg);
     display: flex;
@@ -106,10 +110,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    
 }
 
 .product-card p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     /* Ensure readable font size */
     color: #fff;
     margin: 0.1rem 0;
@@ -117,9 +122,9 @@
 
 /* View Catalogue button */
 .view-catalogue-button {
-    background-color: #000000;
+    background-color: #a48a73;
     color: #ffffff;
-    padding: 0.15rem 0.3rem;
+    padding: 0.8rem 0.8rem;
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -127,8 +132,10 @@
     /* Smaller button font */
     font-weight: bold;
     margin-top: 0.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
 }
 
 .view-catalogue-button:hover {
-    background-color: #0056b3;
+    background-color: #6d4c41;
 }

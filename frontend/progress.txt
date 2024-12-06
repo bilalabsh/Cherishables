@@ -8,3 +8,7 @@ minor issues:
 1)responsivess is good but somewhere overlapping occurs not on fixed media queries.
 
 will complete the product catalog raat ko abhi pushing code.
+
+
+import axios from "axios";
+npm install gsap

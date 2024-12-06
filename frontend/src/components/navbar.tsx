@@ -46,13 +46,7 @@ const Navbar = () => {
         <li>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
         </li>
-        {/* Phone at the bottom */}
-        <div className="phone">
-          <FaPhone className="phone-icon" />
-          <a href="tel:+92 325 2802878" className="phone-number">
-            +92 325 2802878
-          </a>
-        </div>
+
       </ul>
       {/* Menu Icon */}
       <div className="menu-icon" onClick={toggleMenu}>

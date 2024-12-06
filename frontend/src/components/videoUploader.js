@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "../styles/videouploader.css";
 
 const VideoUploader = () => {
   const cloudinaryRef = useRef();
