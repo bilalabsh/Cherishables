@@ -46,12 +46,13 @@ const Navbar = () => {
         <li>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
         </li>
-
       </ul>
       {/* Menu Icon */}
       <div className="menu-icon" onClick={toggleMenu}>
         {menuOpen ? <FaTimes /> : <FaBars />}
       </div>
+      {/* Overlay for sidebar */}
+      {menuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
     </nav>
   );
 };

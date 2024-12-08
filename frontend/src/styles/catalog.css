@@ -88,7 +88,7 @@
     height: auto;
     /* Maintain aspect ratio */
     object-fit: contain;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0rem;
 }
 
 .product-card h3 {

@@ -82,8 +82,8 @@ const ProductCard = ({ product }) => {
       <img className="product-image" src={image} alt={name} />
       <div className="product-info">
         <h3 className="product-name">{name}</h3>
-        <p className="product-price">{price}</p>
-        <p className="product-description">{description}</p>
+        {/* <p className="product-price">{price}</p>
+        <p className="product-description">{description}</p> */}
       </div>
     </div>
   );
