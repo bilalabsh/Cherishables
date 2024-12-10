@@ -28,7 +28,7 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
-      <h1 className="gallery-title">Gallery</h1>
+      <h1 className="gallery-title">Catalogue</h1>
       {products.map((category) => (
         <CategoryBlock
           key={category.mainCategory}
@@ -41,7 +41,10 @@ const Gallery = () => {
 };
 
 const CategoryBlock = ({ title, subCategories }) => {
-  const products = Object.values(subCategories).flat().slice(0, 3); // Display 3 products per category
+  // Check if subCategories is valid before proceeding
+  const products = subCategories
+    ? Object.values(subCategories).flat().slice(0, 3)
+    : [];
 
   return (
     <div className="category-block">
@@ -75,7 +78,7 @@ const CategoryBlock = ({ title, subCategories }) => {
 };
 
 const ProductCard = ({ product }) => {
-  const { name, price, description, image } = product;
+  const { name, image } = product;
 
   return (
     <div className="product-card">
