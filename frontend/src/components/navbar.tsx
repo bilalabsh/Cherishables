@@ -8,19 +8,27 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const sidebarRef = useRef(null);
 
+  // Handle scrolling
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 3);
+
+      // Close the menu when scrolling if it's open
+      if (menuOpen) {
+        setMenuOpen(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [menuOpen]); // Depend on menuOpen to ensure state is up-to-date
 
+  // Toggle menu open/close
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Close menu if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target) && menuOpen) {
@@ -34,7 +42,7 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      {/* WhatsApp icon and link */}
+      {/* WhatsApp icon */}
       <div className="whatsapp">
         <a href="https://wa.me/923252802878" target="_blank" rel="noopener noreferrer" className="whatsapp-link">
           <FaWhatsapp className="whatsapp-icon" />
@@ -43,18 +51,18 @@ const Navbar = () => {
 
       {/* Desktop Navigation Links */}
       <ul className="nav-links desktop-nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/stories">Stories</Link></li>
+        <li><Link to="/gallery">Catalogue</Link></li>
+        <li><Link to="/about">About Us</Link></li>
       </ul>
 
       {/* Mobile Navigation Sidebar */}
       <ul ref={sidebarRef} className={`nav-links mobile-nav ${menuOpen ? "active" : ""}`}>
-        <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-        <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-        <li><a href="#services" onClick={() => setMenuOpen(false)}>Services</a></li>
-        <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+        <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+        <li><Link to="/stories" onClick={() => setMenuOpen(false)}>Stories</Link></li>
+        <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
+        <li><Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
       </ul>
 
       {/* Menu Icon */}

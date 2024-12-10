@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchProducts } from "../services/galleryService";
 import "../styles/gallery.css"; // Add a separate CSS file for styling
 import { Link } from "react-router-dom"; // Import Link from react-router-dom for navigation
+import Navbar from "../components/navbar.tsx";
 
 const Gallery = () => {
   const [products, setProducts] = useState([]);
@@ -28,6 +29,7 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
+      <Navbar/>
       <h1 className="gallery-title">Catalogue</h1>
       {products.map((category) => (
         <CategoryBlock

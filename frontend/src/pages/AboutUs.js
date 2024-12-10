@@ -29,7 +29,6 @@ const AboutUs = () => {
         
         <div className="image-section">
           <img src={require('../assets/logofinal.png')} alt="Cherishables Team" />
-          <img src={require('../assets/logofinal.png')} alt="Cherishables Team" />
         </div>
     </div>
       </div>
