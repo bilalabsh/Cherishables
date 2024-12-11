@@ -28,8 +28,9 @@ const Gallery = () => {
   }
 
   return (
-    <div className="gallery-container">
+    <div>
       <Navbar/>
+    <div className="gallery-container">
       <h1 className="gallery-title">Catalogue</h1>
       {products.map((category) => (
         <CategoryBlock
@@ -38,6 +39,7 @@ const Gallery = () => {
           subCategories={category.subCategories}
         />
       ))}
+    </div>
     </div>
   );
 };

@@ -35,7 +35,6 @@ const AboutUs = () => {
       
       <Footer />
     </div>
-   
   );
 };
 

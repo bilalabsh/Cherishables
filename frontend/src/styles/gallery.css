@@ -93,7 +93,7 @@
 
 .see-more-btn {
     padding: 10px 20px;
-    background-color: #0056b3;
+    background-color: #a47861;
     color: white;
     text-decoration: none;
     font-size: 1rem;
@@ -102,7 +102,7 @@
 }
 
 .see-more-btn:hover {
-    background-color: #004085;
+    background-color: #6d4c41;
 }
 
 /* Media Queries */
