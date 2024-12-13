@@ -17,9 +17,10 @@ const ProductPage = () => {
         const data = await fetchProducts(); // Assuming this fetches the product data from the JSON file
         const product = data.products.find((p) => p.mainCategory === productId);
         setProductData(product);
-        setLoading(false);
       } catch (error) {
         console.error("Error fetching product data:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -35,7 +36,12 @@ const ProductPage = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
   }
 
   if (!productData) {

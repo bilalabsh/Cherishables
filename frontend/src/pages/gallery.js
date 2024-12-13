@@ -13,9 +13,9 @@ const Gallery = () => {
       try {
         const data = await fetchProducts();
         setProducts(data);
-        setLoading(false);
       } catch (error) {
         console.error("Failed to fetch products");
+      } finally {
         setLoading(false);
       }
     };
@@ -24,28 +24,32 @@ const Gallery = () => {
   }, []);
 
   if (loading) {
-    return <p className="loading">Loading...</p>;
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
   }
 
   return (
     <div>
-      <Navbar/>
-    <div className="gallery-container">
-      <h1 className="gallery-title">Catalogue</h1>
-      {products.map((category) => (
-        <CategoryBlock
-          key={category.mainCategory}
-          title={category.mainCategory}
-          subCategories={category.subCategories}
-        />
-      ))}
-    </div>
+      <Navbar />
+      <div className="gallery-container">
+        <h1 className="gallery-title">Catalogue</h1>
+        {products.map((category) => (
+          <CategoryBlock
+            key={category.mainCategory}
+            title={category.mainCategory}
+            subCategories={category.subCategories}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
 const CategoryBlock = ({ title, subCategories }) => {
-  // Check if subCategories is valid before proceeding
   const products = subCategories
     ? Object.values(subCategories).flat().slice(0, 3)
     : [];
@@ -58,8 +62,6 @@ const CategoryBlock = ({ title, subCategories }) => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-
-      {/* See More buttons */}
       <div className="see-more-buttons">
         {title === "2D" && (
           <Link to="/product/2D" className="see-more-btn">
@@ -89,8 +91,6 @@ const ProductCard = ({ product }) => {
       <img className="product-image" src={image} alt={name} />
       <div className="product-info">
         <h3 className="product-name">{name}</h3>
-        {/* <p className="product-price">{price}</p>
-        <p className="product-description">{description}</p> */}
       </div>
     </div>
   );
