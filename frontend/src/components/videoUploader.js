@@ -45,11 +45,18 @@ const VideoUploader = () => {
     const playAndPause = (videoRef) => {
       if (videoRef.current) {
         videoRef.current.muted = true; // Mute the video
-        videoRef.current.play().then(() => {
-          setTimeout(() => {
-            videoRef.current.pause();
-            videoRef.current.muted = false; // Unmute the video after pausing
-          }, 10); // Pause after 0.01 seconds
+        videoRef.current.addEventListener("canplay", () => {
+          videoRef.current
+            .play()
+            .then(() => {
+              setTimeout(() => {
+                videoRef.current.pause();
+                videoRef.current.muted = false; // Unmute the video after pausing
+              }, 10); // Pause after 0.01 seconds
+            })
+            .catch((error) => {
+              console.error("Error playing video:", error);
+            });
         });
       }
     };
