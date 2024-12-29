@@ -26,18 +26,69 @@
     position: sticky;
 }
 
+.social-icons {
+    padding-top: 7px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
-
-/* WhatsApp icon */
-.whatsapp-link {
-    color: #25d366;
-    font-size: 24px;
+.social-icons .social-icon {
+    font-size: 1.6rem;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.whatsapp-link:hover {
+.social-link {
+    color: #000;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon {
+    display: inline-block;
+}
+
+.whatsapp {
+    color: #25d366;
+        font-size: 24px;
+        transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.linkedin {
+    color: #0077b5;
+}
+
+.facebook {
+    color: #4267B2;
+}
+
+.instagram {
+    color: #C13584;
+}
+
+
+.social-icons .whatsapp:hover {
     transform: scale(1.2);
     color: #128c7e;
+    /* WhatsApp green */
+}
+
+.social-icons .linkedin:hover {
+    transform: scale(1.2);
+    color: #0e76a8;
+    /* LinkedIn blue */
+}
+
+.social-icons .facebook:hover {
+    transform: scale(1.2);
+    color: #3b5998;
+    /* Facebook blue */
+}
+
+.social-icons .instagram:hover {
+    transform: scale(1.2);
+    color: #e4405f;
+    /* Instagram pink */
 }
 
 /* Desktop Navigation Links */
