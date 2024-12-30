@@ -90,100 +90,13 @@
             "review": "Perfectly captures the moment.",
             "author": "David G."
           }
-        ],
-        "Imposed": [
-          {
-            "id": "Infants-Imposed-1",
-            "name": "Infants Imposed Product 1",
-            "image": "/images/p2.jpg",
-            "review": "Memories that last a lifetime.",
-            "author": "John D."
-          },
-          {
-            "id": "Infants-Imposed-2",
-            "name": "Infants Imposed Product 2",
-            "image": "/images/p2.jpg",
-            "review": "Beautiful craftsmanship.",
-            "author": "Jane S."
-          },
-          {
-            "id": "Infants-Imposed-3",
-            "name": "Infants Imposed Product 3",
-            "image": "/images/p2.jpg",
-            "review": "Great keepsake idea.",
-            "author": "Alice P."
-          },
-          {
-            "id": "Infants-Imposed-4",
-            "name": "Infants Imposed Product 4",
-            "image": "/images/p2.jpg",
-            "review": "Wonderful quality.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Infants-Imposed-5",
-            "name": "Infants Imposed Product 5",
-            "image": "/images/p2.jpg",
-            "review": "A gift to cherish forever.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Infants-Imposed-6",
-            "name": "Infants Imposed Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Absolutely amazing.",
-            "author": "David G."
-          }
         ]
+        
       }
     },
     {
       "mainCategory": "Teenagers",
       "subCategories": {
-        "2D": [
-          {
-            "id": "Teenagers-2D-1",
-            "name": "Teenagers 2D Product 1",
-            "image": "/images/p2.jpg",
-            "review": "Amazing 3D keepsake.",
-            "author": "John D."
-          },
-          {
-            "id": "Teenagers-2D-2",
-            "name": "Teenagers 2D Product 2",
-            "image": "/images/p2.jpg",
-            "review": "Perfect for newborn memories.",
-            "author": "Jane S."
-          },
-          {
-            "id": "Teenagers-2D-3",
-            "name": "Teenagers 2D Product 3",
-            "image": "/images/p2.jpg",
-            "review": "Beautifully designed.",
-            "author": "Alice P."
-          },
-          {
-            "id": "Teenagers-2D-4",
-            "name": "Teenagers 2D Product 4",
-            "image": "/images/p2.jpg",
-            "review": "High quality and detailed.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Teenagers-2D-5",
-            "name": "Teenagers 2D Product 5",
-            "image": "/images/p2.jpg",
-            "review": "A cherished keepsake.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Teenagers-2D-6",
-            "name": "Teenagers 2D Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Captures moments perfectly.",
-            "author": "David G."
-          }
-        ],
         "3D": [
           {
             "id": "Teenagers-3D-1",
@@ -205,71 +118,6 @@
             "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735581659/3D_Teenagers_3_n6uey2.jpg",
             "review": "Amazing details.",
             "author": "Alice P."
-          },
-          {
-            "id": "Teenagers-3D-4",
-            "name": "Teenagers 3D Product 4",
-            "image": "/images/p2.jpg",
-            "review": "Highly recommended.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Teenagers-3D-5",
-            "name": "Teenagers 3D Product 5",
-            "image": "/images/p2.jpg",
-            "review": "Perfect gift idea.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Teenagers-3D-6",
-            "name": "Teenagers 3D Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Captures precious moments.",
-            "author": "David G."
-          }
-        ],
-        "Imposed": [
-          {
-            "id": "3D-teenage-1",
-            "name": "Teenagers Imposed Product 1",
-            "image": "/images/p2.jpg",
-            "review": "Great for teens.",
-            "author": "John D."
-          },
-          {
-            "id": "3D-teenage-2",
-            "name": "Teenagers Imposed Product 2",
-            "image": "/images/p2.jpg",
-            "review": "A unique keepsake.",
-            "author": "Jane S."
-          },
-          {
-            "id": "3D-teenage-3",
-            "name": "Teenagers Imposed Product 3",
-            "image": "/images/p2.jpg",
-            "review": "Highly detailed.",
-            "author": "Alice P."
-          },
-          {
-            "id": "3D-teenage-4",
-            "name": "Teenagers Imposed Product 4",
-            "image": "/images/p2.jpg",
-            "review": "Amazing craftsmanship.",
-            "author": "Michael T."
-          },
-          {
-            "id": "3D-teenage-5",
-            "name": "Teenagers Imposed Product 5",
-            "image": "/images/p2.jpg",
-            "review": "Loved the quality.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "3D-teenage-6",
-            "name": "Teenagers Imposed Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Beautiful memories.",
-            "author": "David G."
           }
         ]
       }
@@ -292,34 +140,6 @@
             "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735581583/2D_fam_2_rxyt48.jpg",
             "review": "Beautiful and timeless.",
             "author": "Jane S."
-          },
-          {
-            "id": "Family-2D-3",
-            "name": "Family 2D Product 3",
-            "image": "/images/p2.jpg",
-            "review": "Perfect for memories.",
-            "author": "Alice P."
-          },
-          {
-            "id": "Family-2D-4",
-            "name": "Family 2D Product 4",
-            "image": "/images/p2.jpg",
-            "review": "Lovely craftsmanship.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Family-2D-5",
-            "name": "Family 2D Product 5",
-            "image": "/images/p2.jpg",
-            "review": "Highly recommended.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Family-2D-6",
-            "name": "Family 2D Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Amazing keepsake.",
-            "author": "David G."
           }
         ],
         "3D": [
@@ -336,78 +156,6 @@
             "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735581628/3D_Fam_2_xu1tb8.jpg",
             "review": "Beautifully crafted.",
             "author": "Jane S."
-          },
-          {
-            "id": "Family-3D-3",
-            "name": "Family 3D Product 3",
-            "image": "/images/p2.jpg",
-            "review": "Amazing details.",
-            "author": "Alice P."
-          },
-          {
-            "id": "Family-3D-4",
-            "name": "Family 3D Product 4",
-            "image": "/images/p2.jpg",
-            "review": "Highly recommended.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Family-3D-5",
-            "name": "Family 3D Product 5",
-            "image": "/images/p2.jpg",
-            "review": "Perfect gift idea.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Family-3D-6",
-            "name": "Family 3D Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Captures precious moments.",
-            "author": "David G."
-          }
-        ],
-        "Imposed": [
-          {
-            "id": "Family-Imposed-1",
-            "name": "Family Imposed Product 1",
-            "image": "/images/p2.jpg",
-            "review": "Great for teens.",
-            "author": "John D."
-          },
-          {
-            "id": "Family-Imposed-2",
-            "name": "Family Imposed Product 2",
-            "image": "/images/p2.jpg",
-            "review": "A unique keepsake.",
-            "author": "Jane S."
-          },
-          {
-            "id": "Family-Imposed-3",
-            "name": "Family Imposed Product 3",
-            "image": "/images/p2.jpg",
-            "review": "Highly detailed.",
-            "author": "Alice P."
-          },
-          {
-            "id": "Family-Imposed-4",
-            "name": "Family Imposed Product 4",
-            "image": "/images/p2.jpg",
-            "review": "Amazing craftsmanship.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Family-Imposed-5",
-            "name": "Family Imposed Product 5",
-            "image": "/images/p2.jpg",
-            "review": "Loved the quality.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Family-Imposed-6",
-            "name": "Family Imposed Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Beautiful memories.",
-            "author": "David G."
           }
         ]
       }
@@ -415,50 +163,7 @@
     {
       "mainCategory": "Couples",
       "subCategories": {
-        "2D": [
-          {
-            "id": "Couples-2D-1",
-            "name": "Couples 2D Product 1",
-            "image": "/images/p2.jpg",
-            "review": "A unique keepsake.",
-            "author": "John D."
-          },
-          {
-            "id": "Couples-2D-2",
-            "name": "Couples 2D Product 2",
-            "image": "/images/p2.jpg",
-            "review": "Beautiful and timeless.",
-            "author": "Jane S."
-          },
-          {
-            "id": "Couples-2D-3",
-            "name": "Couples 2D Product 3",
-            "image": "/images/p2.jpg",
-            "review": "Perfect for memories.",
-            "author": "Alice P."
-          },
-          {
-            "id": "Couples-2D-4",
-            "name": "Couples 2D Product 4",
-            "image": "/images/p2.jpg",
-            "review": "Lovely craftsmanship.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Couples-2D-5",
-            "name": "Couples 2D Product 5",
-            "image": "/images/p2.jpg",
-            "review": "Highly recommended.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Couples-2D-6",
-            "name": "Couples 2D Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Amazing keepsake.",
-            "author": "David G."
-          }
-        ],
+        
         "3D": [
           {
             "id": "Couples-3D-1",
@@ -473,78 +178,6 @@
             "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735581622/3D_couples_2_b4fq6x.jpg",
             "review": "Beautifully crafted.",
             "author": "Jane S."
-          },
-          {
-            "id": "Couples-3D-3",
-            "name": "Couples 3D Product 3",
-            "image": "/images/p2.jpg",
-            "review": "Amazing details.",
-            "author": "Alice P."
-          },
-          {
-            "id": "Couples-3D-4",
-            "name": "Couples 3D Product 4",
-            "image": "/images/p2.jpg",
-            "review": "Highly recommended.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Couples-3D-5",
-            "name": "Couples 3D Product 5",
-            "image": "/images/p2.jpg",
-            "review": "Perfect gift idea.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Couples-3D-6",
-            "name": "Couples 3D Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Captures precious moments.",
-            "author": "David G."
-          }
-        ],
-        "Imposed": [
-          {
-            "id": "Couples-Imposed-1",
-            "name": "Couples Imposed Product 1",
-            "image": "/images/p2.jpg",
-            "review": "Great for teens.",
-            "author": "John D."
-          },
-          {
-            "id": "Couples-Imposed-2",
-            "name": "Couples Imposed Product 2",
-            "image": "/images/p2.jpg",
-            "review": "A unique keepsake.",
-            "author": "Jane S."
-          },
-          {
-            "id": "Couples-Imposed-3",
-            "name": "Couples Imposed Product 3",
-            "image": "/images/p2.jpg",
-            "review": "Highly detailed.",
-            "author": "Alice P."
-          },
-          {
-            "id": "Couples-Imposed-4",
-            "name": "Couples Imposed Product 4",
-            "image": "/images/p2.jpg",
-            "review": "Amazing craftsmanship.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Couples-Imposed-5",
-            "name": "Couples Imposed Product 5",
-            "image": "/images/p2.jpg",
-            "review": "Loved the quality.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Couples-Imposed-6",
-            "name": "Couples Imposed Product 6",
-            "image": "/images/p2.jpg",
-            "review": "Beautiful memories.",
-            "author": "David G."
           }
         ]
       }

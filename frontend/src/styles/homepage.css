@@ -139,8 +139,9 @@
 @media (max-width: 575.98px) {
     .hero-section {
         height: 65vh;
-        background-position: center;
-        background-size: cover;
+        background-image: url('../assets/affamfinalm.jpg');
+        background-position: top;
+        background-size: 100%;
         /* Reduced height for better mobile view */
     }
 
@@ -155,21 +156,25 @@
     }
 }
 
-/* Small devices (portrait tablets and large phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+/* Medium devices (tablets, 576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
     .hero-section {
-        height: 75vh;
-        /* Adjust height for better fit */
+        height: 70vh;
+        /* Consistent background */
+        background-position: center;
+        /* Center for visual balance */
+        background-size: cover;
+        /* Ensures full coverage */
     }
 
     .hero-section h1 {
-        font-size: 2.8rem;
-        /* Slightly reduced font size */
+        font-size: 2.25rem;
+        /* Larger than mobile, smaller than desktop */
     }
 
     .hero-heading {
         font-size: 1.2rem;
-        /* Adjust subheading size */
+        /* Adjusted for medium screens */
     }
 }
 

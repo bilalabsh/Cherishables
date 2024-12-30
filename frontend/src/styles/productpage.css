@@ -157,6 +157,7 @@ h2 {
     bottom: -10px;
     right: -20px;
 }
+
 .author {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
@@ -214,36 +215,84 @@ h2 {
     transform: scale(1.1);
 }
 
-
+/* Loading Spinner */
 .loading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
 .spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #f3f3f3; /* Light gray */
-  border-top: 5px solid #3498db; /* Blue */
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    /* Light gray */
+    border-top: 5px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .loading-container p {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #555;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Media Queries */
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .product-card {
+        flex: 0 1 calc(100% - 20px);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .product-card {
+        flex: 0 1 calc(50% - 20px);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .product-card {
+        flex: 0 1 calc(33.33% - 20px);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .product-card {
+        flex: 0 1 calc(30% - 20px);
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
 }
