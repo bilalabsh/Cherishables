@@ -8,22 +8,28 @@
   const ProductCatalog = () => {
     const products = [
       {
-        id: "2D",
-        name: "2D",
+        id: "Infants",
+        name: "Infants & Toddlers",
         price: "$99",
         img: lamine,
         description: "A beautiful hand impression in metal.",
       },
       {
-        id: "3D",
-        name: "3D",
+        id: "Teenagers",
+        name: "Teenagers",
         price: "$89",
         img: foot,
         description: "A unique foot impression in metal.",
       },
       {
-        id: "Imposed",
-        name: "Imposed",
+        id: "Family",
+        name: "Family",
+        img: babyHand,
+        description: "Capture your baby’s first handprint.",
+      },
+      {
+        id: "Couples",
+        name: "Couples",
         img: babyHand,
         description: "Capture your baby’s first handprint.",
       },

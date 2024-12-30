@@ -63,19 +63,24 @@ const CategoryBlock = ({ title, subCategories }) => {
         ))}
       </div>
       <div className="see-more-buttons">
-        {title === "2D" && (
-          <Link to="/product/2D" className="see-more-btn">
-            See More 2D
+        {title === "Infants" && (
+          <Link to="/product/Infants" className="see-more-btn">
+            View More
           </Link>
         )}
-        {title === "3D" && (
-          <Link to="/product/3D" className="see-more-btn">
-            See More 3D
+        {title === "Teenagers" && (
+          <Link to="/product/Teenagers" className="see-more-btn">
+            View More
           </Link>
         )}
-        {title === "Imposed" && (
-          <Link to="/product/imposed" className="see-more-btn">
-            See More Imposed
+        {title === "Family" && (
+          <Link to="/product/Family" className="see-more-btn">
+            View More
+          </Link>
+        )}
+        {title === "Couples" && (
+          <Link to="/product/Couples" className="see-more-btn">
+            View More
           </Link>
         )}
       </div>
