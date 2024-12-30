@@ -70,11 +70,7 @@ const HomePage = () => {
         
         <ProductCatalog />
       </section>
-      {/* Parallax sections */}
-      <section className="parallax-section">
-        <div className="bg"></div>
-        <h1>Simple parallax sections</h1>
-      </section>
+      
 
       <section>
         <Footer />

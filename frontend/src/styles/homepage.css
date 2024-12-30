@@ -10,8 +10,7 @@
 /* Hero section */
 .hero-section {
     background-image: url('../assets/affa.JPG');
-    background-size: cover;
-
+    background-size: 100% 100%;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -24,6 +23,7 @@
     background-repeat: no-repeat;
     padding: 0;
     flex-shrink: 0;
+    
     
 }
 
@@ -138,8 +138,9 @@
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
     .hero-section {
-        height: 60vh;
+        height: 65vh;
         background-position: center;
+        background-size: cover;
         /* Reduced height for better mobile view */
     }
 
