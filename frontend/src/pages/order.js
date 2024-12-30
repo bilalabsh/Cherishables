@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/order.css";
 import Navbar2 from "../components/navbar2.tsx";
 
-
 function Order() {
   const [buttonState, setButtonState] = useState("default");
 
@@ -13,7 +12,6 @@ function Order() {
 
     const formData = {
       fullName: e.target.fullName.value,
-      surname: e.target.surname.value,
       dob: e.target.dob.value,
       pob: e.target.pob.value,
       gender: e.target.gender.value,
@@ -63,151 +61,53 @@ function Order() {
         <form className="order-form" onSubmit={handleSubmit}>
           <h1 className="form-title">Cherishables</h1>
           <p className="subtitle">Impressive Impressions</p>
-          <h2>Order Form</h2>
+          <h2>Appointment Form</h2>
           <p className="tagline">
             Emotions cannot always be expressed but they can be preserved.
           </p>
 
           <section className="personal-info">
             <h3>Personal Information</h3>
+
+            <div className="form-group">
+              <label>Date:</label>
+              <input type="date" name="dob" required />
+            </div>
+
             <div className="form-group">
               <label>Full Name:</label>
-              <input type="text" name="fullName" required />
-              <label>Surname:</label>
-              <input type="text" name="surname" required />
+              <input
+                type="text"
+                name="fullName"
+                required
+                placeholder="Enter full name"
+              />
             </div>
+
             <div className="form-group">
-              <label>Date of Birth:</label>
-              <input type="date" name="dob" required />
-              <label>Place of Birth:</label>
-              <input type="text" name="pob" required />
+              <label>Email:</label>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Enter your email"
+              />
             </div>
+
             <div className="form-group">
-              <label>Gender:</label>
-              <label>
-                <input type="radio" name="gender" value="Male" required /> Male
-              </label>
-              <label>
-                <input type="radio" name="gender" value="Female" required />{" "}
-                Female
-              </label>
-            </div>
-            <div className="form-group">
-              <label>Nationality:</label>
-              <input type="text" name="nationality" required />
-            </div>
-            <div className="form-group">
-              <label>Address:</label>
-              <textarea name="address" required />
+              <label>Mobile Number:</label>
+              <input
+                type="tel"
+                name="mobileNumber"
+                required
+                placeholder="Enter your mobile number"
+                pattern="[0-9]{10}" // You can adjust the pattern based on your preferred mobile format
+                title="Mobile number should be 10 digits"
+              />
             </div>
           </section>
 
-          <section className="impression-details">
-            <h3>Details of Personalised Impressions</h3>
-            <div className="form-group">
-              <label>Impression:</label>
-              <label>
-                <input type="radio" name="impression" value="Hand" required />{" "}
-                Hand
-              </label>
-              <label>
-                <input type="radio" name="impression" value="Foot" required />{" "}
-                Foot
-              </label>
-              <label>
-                <input type="radio" name="impression" value="Both" required />{" "}
-                Both
-              </label>
-            </div>
-            <div className="form-group">
-              <label>Base:</label>
-              <label>
-                <input type="radio" name="base" value="Glass" required /> Glass
-              </label>
-              <label>
-                <input type="radio" name="base" value="Marble" required />{" "}
-                Marble
-              </label>
-              <label>
-                <input type="radio" name="base" value="Frame" required /> Frame
-              </label>
-              <label>
-                <input type="radio" name="base" value="Wood" required /> Wood
-              </label>
-              <label>
-                <input type="radio" name="base" value="Metal" required /> Metal
-              </label>
-            </div>
-            <div className="form-group">
-              <label>Colour:</label>
-              <label>
-                <input type="radio" name="color" value="Gold" required /> Gold
-              </label>
-              <label>
-                <input type="radio" name="color" value="Silver" required />{" "}
-                Silver
-              </label>
-              <label>
-                <input type="radio" name="color" value="Bronze" required />{" "}
-                Bronze
-              </label>
-              <label>
-                <input type="radio" name="color" value="Copper" required />{" "}
-                Copper
-              </label>
-            </div>
-            <div className="form-group">
-              <label>Writing Style:</label>
-              <label>
-                <input
-                  type="radio"
-                  name="writingStyle"
-                  value="Calligraphy"
-                  required
-                />{" "}
-                Calligraphy
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="writingStyle"
-                  value="Brass Plate"
-                  required
-                />{" "}
-                Brass Plate
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="writingStyle"
-                  value="Steel Plate"
-                  required
-                />{" "}
-                Steel Plate
-              </label>
-            </div>
-            <div className="form-group">
-              <label>Design Number:</label>
-              <input type="text" name="designNumber" required />
-            </div>
-            <div className="form-group">
-              <label>Matter to Write:</label>
-              <textarea name="matterToWrite" required />
-            </div>
-          </section>
-
-          <div className="signatures">
-            <div>
-              <hr />
-              <br />
-              <p>Customer Signature</p>
-            </div>
-            <div>
-              <hr />
-              <br />
-              <p>Cherishables Desk</p>
-            </div>
-          </div>
+          
 
           <button
             type="submit"
