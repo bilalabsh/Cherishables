@@ -7,38 +7,34 @@
     position: relative;
 }
 
-/* Hero section with background image */
+/* Hero section */
 .hero-section {
     background-image: url('../assets/final2.jpg');
     background-size: cover;
-    background-size: 100%;
-    background-position: top center;
+    background-position: center;
     width: 100%;
     height: 100vh;
-    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    z-index: 1;
-    text-align: center;
     color: #ffffff;
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    flex-shrink: 0;
+    text-align: center;
 }
 
-/* Position catalog directly below the hero */
-.catalog-section {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #ffffff;
-    padding-top: 8rem;
-    margin: 0;
+.hero-section h1 {
+    font-family: 'Raleway-Bold';
+    font-size: 4rem;
+    color: #ffffff;
+    margin-top: 1rem;
 }
+
+.hero-heading {
+    font-family: 'Raleway-Bold';
+    font-size: 1.5rem;
+    color: #514848;
+}  
 
 /* Parallax sections */
 .parallax-section {
@@ -49,7 +45,6 @@
     justify-content: center;
     color: #ffffff;
     text-align: center;
-    overflow: hidden;
 }
 
 .parallax-section .bg {
@@ -60,8 +55,6 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
 }
 
 /* Navbar styling */
@@ -69,57 +62,14 @@
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 1000;
 }
 
-/* Centered Hero Heading */
-.hero-section h1 {
-    font-family: 'Raleway-Bold';
-    font-size: 4rem;
-    font-weight: 1000;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
-    color: #ffffff;
-    margin: 0;
-    margin-top: 1rem;
-}
-
-.hero-heading {
-    font-family: 'Raleway-Bold';
-    font-size: 1.5rem;
-    font-weight: light;
-    color: #514848;
-    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
-    padding-bottom: 2rem;
-}
-
-/* Catalog section styling */
-.catalog-section {
-    width: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    
-}
-
+/* ============================= */
 /* Media Queries */
+/* ============================= */
 
-/* Extra small devices (phones, less than 576px) */
-@media (max-width: 575.98px) {
-    .hero-section {
-        height: 70vh;
-    }
-
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-heading {
-        font-size: 1.2rem;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
     .hero-section {
         height: 80vh;
     }
@@ -129,47 +79,37 @@
     }
 
     .hero-heading {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .catalog-section {
+        padding-top: 2rem;
+    }
+
+    .parallax-section {
+        height: 70vh;
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
     .hero-section {
-        height: 90vh;
+        height: 70vh;
     }
 
     .hero-section h1 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 
     .hero-heading {
-        font-size: 1.4rem;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .hero-section h1 {
-        font-size: 4rem;
+        font-size: 1rem;
     }
 
-    .hero-heading {
-        font-size: 1.5rem;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .hero-section {
-        height: 100vh;
+    .catalog-section {
+        padding: 1rem;
     }
 
-    .hero-section h1 {
-        font-size: 4rem;
-    }
-
-    .hero-heading {
-        font-size: 1.5rem;
+    .parallax-section {
+        height: 60vh;
     }
 }

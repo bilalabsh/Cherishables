@@ -9,9 +9,7 @@
     box-sizing: border-box;
     position: relative;
     transform: scale(0.8);
-    /* Scales down to 80% */
     transform-origin: center;
-    /* Shrinks from the center */
 }
 
 /* Product card wrapper adjustment for the hero-catalog */
@@ -128,76 +126,9 @@
     background-color: #6d4c41;
 }
 
-/* ============================= */
 /* Media Queries for Responsiveness */
-/* ============================= */
-
-/* For tablets (768px and below) */
 @media (max-width: 768px) {
-    .hero-catalog {
-        transform: scale(1);
-        /* Reset scale */
-        justify-content: center;
-        height: auto;
+    .product-card-wrapper{
+        width: 100%;      
     }
-
-    .product-card-wrapper {
-        width: 80%;
-        position: static;
-        /* Reset position */
-        margin: 1rem 0;
-        /* Add margin for spacing */
-    }
-
-    .product-card {
-        width: 100px;
-        height: 100px;
-    }
-
-    .product-card h3 {
-        font-size: 1rem;
-    }
-
-    .product-card p {
-        font-size: 0.9rem;
-    }
-
-    .view-catalogue-button {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* For mobile devices (480px and below) */
-@media (max-width: 480px) {
-    .hero-catalog {
-        padding: 1rem;
-        transform: scale(1);
-    }
-
-    .product-card-wrapper {
-        width: 100%;
-        flex-direction: column;
-        /* Stack cards vertically */
-        gap: 1em;
-        margin-bottom: 1rem;
-    }
- 
-    .product-card {
-        width: 80px;
-        height: 80px;
-    }
-
-    .product-card h3 {
-        font-size: 0.8rem;
-    }
-
-    .product-card p {
-        font-size: 0.7rem;
-    }
-
-    .view-catalogue-button {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.8rem;
-    }
-}
+ }
