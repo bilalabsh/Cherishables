@@ -63,9 +63,11 @@ const HomePage = () => {
   return (
     <div className={`homepage ${isScrolled ? "scrolled" : ""}`}>
       <Navbar />
+      <div className="scrolling-text">
+        <p>Please contact us for your personalized impressions</p>
+      </div>
       <section className="hero-section">
-        <h1>Cherishables</h1>
-        <h3 className="hero-heading">Impressive Impressions</h3>
+        
         <ProductCatalog />
       </section>
       {/* Parallax sections */}
