@@ -73,9 +73,9 @@
 }
 
 .product-card-front img {
-    width: 80%;
-    height: auto;
-    object-fit: contain;
+    width: 100%;
+    background-size: contain;
+    height: 100vh;
     margin-bottom: 0rem;
 }
 
