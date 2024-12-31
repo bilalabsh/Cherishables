@@ -56,7 +56,7 @@ h2 {
 }
 
 .products-container.expanded {
-    max-height: 1000px;
+    max-height: 100%;
     opacity: 1;
 }
 
@@ -256,7 +256,7 @@ h2 {
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
     .product-card {
-        flex: 0 1 calc(100% - 20px);
+        flex: 0 1 calc(100%);
     }
 
     h1 {
@@ -284,7 +284,7 @@ h2 {
     h1 {
         font-size: 3rem;
     }
-}
+} 
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
