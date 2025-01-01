@@ -134,7 +134,12 @@
         gap: 0.5em;
         top: 150%;
     }
-
+    .product-card-front img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 0.2rem;
+    }
     .product-card {
         width: 90px;
         height: 90px;

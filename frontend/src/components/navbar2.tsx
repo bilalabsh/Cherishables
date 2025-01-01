@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/navbar2.css";
-import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaWhatsapp,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -38,16 +45,46 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       {/* WhatsApp icon */}
-      <div className="whatsapp">
-        <a href="https://wa.me/923252802878" target="_blank" rel="noopener noreferrer" className="whatsapp-link">
-          <FaWhatsapp className="whatsapp-icon" />
-        </a>
-      </div>
+            <div className="social-icons">
+              <a
+                href="https://wa.me/923252802878"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FaWhatsapp className="social-icon whatsapp" />
+              </a>
+              <a
+                href="https://linkedin.com/company/cherishables-co"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FaLinkedin className="social-icon linkedin" />
+              </a>
+              <a
+                href="https://www.facebook.com/cherishables.art"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FaFacebook className="social-icon facebook" />
+              </a>
+              <a
+                href="https://www.instagram.com/cherishables_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FaInstagram className="social-icon instagram" />
+              </a>
+            </div>
+      
 
       {/* Desktop Navigation Links */}
       <ul className="nav-links desktop-nav">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/stories">Stories</Link></li>
+        <li><Link to="/stories">Reviews</Link></li>
         <li><Link to="/gallery">Catalogue</Link></li>
         <li><Link to="/about">About Us</Link></li>
       </ul>

@@ -16,15 +16,12 @@
 
 .order-form {
     background-color: rgba(255, 255, 255, 0.3);
-    /* Increased opacity for better readability */
     backdrop-filter: blur(15px);
-    /* Blur effect */
     padding: 30px;
     border-radius: 15px;
     max-width: 800px;
     width: 100%;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    /* Enhanced shadow */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -38,8 +35,7 @@
     font-family: 'Raleway-Bold';
     color: #558a55;
     margin: 0;
-    font-size: rem;
-    /* Increased font size */
+    font-size: 1.5rem;
 }
 
 .subtitle {
@@ -47,7 +43,6 @@
     color: #c56c86;
     margin: 0;
     font-size: 1.2rem;
-    /* Slightly larger subtitle */
 }
 
 h2 {
@@ -56,7 +51,6 @@ h2 {
     margin: 15px 0;
     font-size: 1.5rem;
     text-decoration: underline;
-    /* Added underline */
 }
 
 .tagline {
@@ -70,34 +64,28 @@ h3 {
     color: #800080;
     font-size: 1.2rem;
     padding-bottom: 20px;
-    /* Slightly larger font size */
     margin-bottom: 10px;
     text-decoration: underline;
-    /* Emphasize section headings */
-    
 }
 
 .form-group {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* Increased gap for better spacing */
     margin-bottom: 15px;
     align-items: center;
-    /* Align inputs and labels properly */
 }
 
 .form-group label {
     min-width: 115px;
-    /* Increased minimum width for label alignment */
     flex: 0;
     font-weight: bold;
-    /* Make labels stand out */
     color: #333;
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     flex: 2;
     padding: 10px;
     border: 1px solid #ccc;
@@ -106,11 +94,13 @@ h3 {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
     background: #fff;
-    /* Added background for contrast */
+    font-size: 16px;
+    appearance: none;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     border-color: #007bff;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
@@ -125,15 +115,12 @@ textarea {
     margin-top: 30px;
     padding-top: 70px;
     border-top: 2px solid #ccc;
-    /* Separate signature area visually */
-    
 }
 
 .signatures div {
     text-align: center;
     width: 45%;
     font-weight: bold;
-    /* Bold for better emphasis */
     padding-bottom: 20px;
 }
 
@@ -151,6 +138,7 @@ input[type="radio"] {
 input[type="radio"]:hover {
     transform: scale(1.3);
 }
+
 .submit-button {
     display: block;
     margin: 20px auto;
@@ -167,7 +155,6 @@ input[type="radio"]:hover {
     transition: all 0.3s ease-in-out;
     text-align: center;
     width: 200px;
-    /* Ensures consistent size */
 }
 
 .submit-button.default:hover {
@@ -177,9 +164,7 @@ input[type="radio"]:hover {
 
 .submit-button.sending {
     color: white;
-    /* Keeps text visible during animation */
     pointer-events: none;
-    /* Disable interaction */
     position: relative;
 }
 
@@ -191,10 +176,8 @@ input[type="radio"]:hover {
     height: 100%;
     width: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    /* Darker overlay color */
     animation: loadingBar 3s linear forwards;
     z-index: 0;
-    /* Ensures it sits behind the text */
 }
 
 .submit-button.submitted {
@@ -202,7 +185,6 @@ input[type="radio"]:hover {
     color: white;
 }
 
-/* Animation for the loading effect */
 @keyframes loadingBar {
     from {
         width: 0%;
@@ -213,8 +195,20 @@ input[type="radio"]:hover {
     }
 }
 
-/* Ensure button text stays on top */
 .submit-button span {
     position: relative;
     z-index: 1;
+}
+
+.flag-icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.form-group select option {
+    font-size: 16px;
+    padding-left: 5px;
 }

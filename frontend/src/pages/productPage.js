@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"; // Import useParams to capture the
 import { fetchProducts } from "../services/productService"; // Function to fetch product data
 import "../styles/productpage.css";
 import Footer from "../components/Footer";
+import Navbar from "../components/navbar.tsx";
 
 const ProductPage = () => {
   const { productId } = useParams(); // Get the productId from the URL
@@ -49,55 +50,58 @@ const ProductPage = () => {
   }
 
   return (
-    <div className="product-page-container">
-      <h1>{productData.mainCategory} Products</h1>
-      {Object.keys(productData.subCategories).map((category) => {
-        const isExpanded = expandedCategory === category;
-        return (
-          <section key={category} className="category-section">
-            <h2>{category}</h2>
-            <div
-              className={`products-container ${isExpanded ? "expanded" : ""}`}
-            >
-              {productData.subCategories[category]
-                .slice(
-                  0,
-                  isExpanded ? productData.subCategories[category].length : 3
-                )
-                .map((product) => (
-                  <div key={product.id} className="product-card">
-                    <div className="card-inner">
-                      {/* Front Side */}
-                      <div className="card-front">
-                        <img src={product.image} alt={product.name} />
-                      </div>
+    <div>
+      <Navbar />
+      <div className="product-page-container">
+        <h1>{productData.mainCategory} Products</h1>
+        {Object.keys(productData.subCategories).map((category) => {
+          const isExpanded = expandedCategory === category;
+          return (
+            <section key={category} className="category-section">
+              <h2>{category}</h2>
+              <div
+                className={`products-container ${isExpanded ? "expanded" : ""}`}
+              >
+                {productData.subCategories[category]
+                  .slice(
+                    0,
+                    isExpanded ? productData.subCategories[category].length : 3
+                  )
+                  .map((product) => (
+                    <div key={product.id} className="product-card">
+                      <div className="card-inner">
+                        {/* Front Side */}
+                        <div className="card-front">
+                          <img src={product.image} alt={product.name} />
+                        </div>
 
-                      {/* Back Side */}
-                      <div className="card-back">
-                        <blockquote className="review-quote">
-                          {product.review}
-                        </blockquote>
-                        <p className="author">- {product.author}</p>
+                        {/* Back Side */}
+                        <div className="card-back">
+                          <blockquote className="review-quote">
+                            {product.review}
+                          </blockquote>
+                          <p className="author">- {product.author}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-            </div>
-            <div className="category-controls">
-              <button
-                className="toggle-arrow"
-                onClick={() => toggleCategory(category)}
-              >
-                {isExpanded ? "Show Less" : "Show More"}
-              </button>
-              <a href="/order" className="order-now-button">
-                Order Now
-              </a>
-            </div>
-          </section>
-        );
-      })}
-      <Footer />
+                  ))}
+              </div>
+              <div className="category-controls">
+                <button
+                  className="toggle-arrow"
+                  onClick={() => toggleCategory(category)}
+                >
+                  {isExpanded ? "Show Less" : "Show More"}
+                </button>
+                <a href="/appointment" className="order-now-button">
+                  Book Your Appointment !
+                </a>
+              </div>
+            </section>
+          );
+        })}
+        <Footer />
+      </div>
     </div>
   );
 };
