@@ -18,7 +18,7 @@ app.post("/", async (req, res) => {
 
   try {
     const googleScriptURL =
-      "https://script.google.com/macros/s/AKfycbwV7ycLmfQMT6rqO3jtOWEXjngHEGSjBWlaB1KSM9wRtlTYtiDucGkns_DRoArIJPlI/exec";
+      "https://script.google.com/macros/s/AKfycbyqpv-X2FAzXCoim0Xg_uc45TQapmm8wjY3h5ck_zsJqTpe9Caj_FelcnztPK_96Gg/exec";
 
     console.log("Sending data to Google Apps Script at:", googleScriptURL);
 

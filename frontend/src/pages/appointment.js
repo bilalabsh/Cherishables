@@ -7,19 +7,33 @@ import citiesData from "../assets/cities.json";
 
 function Order() {
   const [cities, setCities] = useState([]);
-  const [selectedCountryCode, setSelectedCountryCode] = useState("");
+  const [selectedCountryCode, setSelectedCountryCode] = useState("+1"); // Default country code
   const [buttonState, setButtonState] = useState("default");
 
   // Update cities based on selected country
   const handleCountryChange = (e) => {
-    const countryCode = e.target.value;
-    setSelectedCountryCode(countryCode);
+    const countryIso2 = e.target.value;
+
+    // Find the full name of the country based on the selected ISO2 code
+    const selectedCountry = countriesData.find(
+      (country) => country.iso2 === countryIso2
+    );
 
     // Filter cities for the selected country
     const filteredCities = citiesData.filter(
-      (city) => city.country_code === countryCode
+      (city) => city.country_code === countryIso2
     );
     setCities(filteredCities);
+
+    // Update the country code
+    setSelectedCountryCode(
+      selectedCountry ? `+${selectedCountry.phone_code}` : "+1"
+    );
+  };
+
+  // Handle phone number country code change
+  const handlePhoneCodeChange = (e) => {
+    setSelectedCountryCode(`+${e.target.value}`);
   };
 
   const handleSubmit = async (e) => {
@@ -29,10 +43,12 @@ function Order() {
     const formData = {
       fullName: e.target.fullName.value,
       email: e.target.email.value,
-      mobileNumber: e.target.mobileNumber.value,
+      mobileNumber: `${selectedCountryCode}${e.target.mobileNumber.value}`,
       dob: e.target.dob.value,
       city: e.target.city.value,
-      country: e.target.country.value,
+      country: countriesData.find(
+        (country) => country.iso2 === e.target.country.value
+      )?.name, // Save the full name of the country
     };
 
     try {
@@ -97,14 +113,29 @@ function Order() {
 
             <div className="form-group">
               <label>Mobile Number:</label>
-              <input
-                type="tel"
-                name="mobileNumber"
-                required
-                placeholder="Enter your mobile number"
-                pattern="[0-9]{10}"
-                title="Mobile number should be 10 digits"
-              />
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <select
+                  name="phoneCode"
+                  required
+                  style={{ marginRight: "10px" }}
+                  onChange={handlePhoneCodeChange}
+                >
+                  {countriesData.map((country) => (
+                    <option key={country.iso2} value={country.phone_code}>
+                      +{country.phone_code} ({country.name})
+                    </option>
+                  ))}
+                </select>
+                <input
+                  type="tel"
+                  name="mobileNumber"
+                  required
+                  placeholder="Enter your mobile number"
+                  pattern="[0-9]{8,11}"
+                  title="Mobile number should be 8 to 11 digits"
+                  maxLength="11"
+                />
+              </div>
             </div>
 
             <div className="form-group">
@@ -113,10 +144,7 @@ function Order() {
                 <option value="">Select your country</option>
                 {countriesData.map((country) => (
                   <option key={country.iso2} value={country.iso2}>
-                    {country.name}{" "}
-                    <span
-                      className={`flag-icon flag-icon-${country.iso2.toLowerCase()}`}
-                    />
+                    {country.name}
                   </option>
                 ))}
               </select>
