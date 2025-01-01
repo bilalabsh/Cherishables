@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar_temp = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const sidebarRef = useRef(null);
@@ -105,4 +105,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar_temp;
