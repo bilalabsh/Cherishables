@@ -50,7 +50,6 @@ const ProductPage = () => {
   }
 
   return (
-<<<<<<< Updated upstream
     <div>
       <Navbar />
       <div className="product-page-container">
@@ -75,32 +74,6 @@ const ProductPage = () => {
                         <div className="card-front">
                           <img src={product.image} alt={product.name} />
                         </div>
-=======
-
-    <div className="product-page-container">
-    <Navbar />
-      <h1>{productData.mainCategory} Products</h1>
-      {Object.keys(productData.subCategories).map((category) => {
-        const isExpanded = expandedCategory === category;
-        return (
-          <section key={category} className="category-section">
-            <h2>{category}</h2>
-            <div
-              className={`products-container ${isExpanded ? "expanded" : ""}`}
-            >
-              {productData.subCategories[category]
-                .slice(
-                  0,
-                  isExpanded ? productData.subCategories[category].length : 3
-                )
-                .map((product) => (
-                  <div key={product.id} className="product-card">
-                    <div className="card-inner">
-                      {/* Front Side */}
-                      <div className="card-front">
-                        <img src={product.image} alt={product.name} />
-                      </div>
->>>>>>> Stashed changes
 
                         {/* Back Side */}
                         <div className="card-back">
