@@ -137,7 +137,7 @@
     .product-card-front img {
         width: 100%;
         height: auto;
-        object-fit: cover;
+        object-fit: contain;
         margin-bottom: 0.2rem;
     }
     .product-card {
