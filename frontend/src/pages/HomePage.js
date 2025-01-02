@@ -32,7 +32,7 @@ const HomePage = () => {
                 unbreakable bond of love.
               </p>
 
-              <h2>Our Journey of Love and Resilience</h2>
+              <h2>Our Journey of Love</h2>
               <p>
                 Our journey began in 2003, preserving hand and foot impressions
                 in metal, which are unbreakable symbolizing the unbreakable bond
