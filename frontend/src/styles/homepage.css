@@ -118,6 +118,16 @@
     animation: scroll-left 20s linear infinite;
 }
 
+.video-section {
+    width: 100%;
+
+}
+
+.container-section {
+    width: 100%;
+
+}
+
 /* Keyframes for smooth scrolling */
 @keyframes scroll-left {
     0% {

@@ -2,6 +2,7 @@ import Navbar from "../components/navbar.tsx";
 import ProductCatalog from "../components/catalog";
 import Footer from "../components/Footer";
 import "../styles/homepage.css";
+import "../styles/aboutUs.css";
 import VideoUploader from "../components/videoUploader";
 
 
@@ -16,10 +17,10 @@ const HomePage = () => {
       <section className="hero-section">
         <ProductCatalog />
       </section>
-      <section>
+      <section className="video-section">
         <VideoUploader />
       </section>
-      <section>
+      <section className="container-section">
         <div className="about-us-container">
           <div className="about-us-content">
             <div className="text-section">
@@ -56,7 +57,7 @@ const HomePage = () => {
                 beautiful people.
               </p>
             </div>
-
+        
             <div className="image-section">
               <img
                 src={require("../assets/logofinal.png")}
@@ -66,6 +67,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      
       <section>
         <div className="category-controls">
           <a href="/appointment" className="order-now-button">
