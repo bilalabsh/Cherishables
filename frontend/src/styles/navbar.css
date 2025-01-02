@@ -19,7 +19,7 @@ margin: 0 auto;
 
 /* Scrolled state for navbar */
 .navbar.scrolled {
-    background-color: rgba(137, 122, 122, 0.9);
+    background-color: #95877c;
     /* Light background when scrolled */
     backdrop-filter: blur(10px);
     /* Adds blur effect */
