@@ -125,7 +125,7 @@ const VideoUploader = () => {
           </h2>
           <h1 style={styles.h3}>
             Watch as we bring to life the cherished memory of a 6-month-old's
-            tiny hand, preserved in both 2D and 3D artistry. This keepsake isn't
+            tiny hand, preserved in 2D, 3D and embossed.. This keepsake isn't
             just a decoration; it's a testament to the moments that shape our
             lives, captured by Cherishables to be treasured forever.
           </h1>
