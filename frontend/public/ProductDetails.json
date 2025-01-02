@@ -119,6 +119,12 @@
             "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752492/imposed_infants_2_jdsqs9.jpg",
             "review": "A perfect way to capture milestones.",
             "author": "Jane S."
+          },{
+            "id": "Infants-Imposed-3",
+            "name": "Infants Imposed Product 3",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735821465/Imposed_Infants_3_tlcfkv.jpg",
+            "review": "Great quality and design.",
+            "author": "Alice P."
           }
         ]
         
@@ -201,6 +207,12 @@
             "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735754687/2D_fam_1_xzdvbe.jpg",
             "review": "Beautiful and timeless.",
             "author": "Jane S."
+          },{
+            "id": "Family-2D-3",
+            "name": "Family 2D Product 3",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735821573/2D_fam_6_zlc7nw.jpg",
+            "review": "A perfect gift for families.",
+            "author": "Alice P."
           }
         ]
       }

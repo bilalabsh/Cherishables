@@ -9,6 +9,7 @@ function Order() {
   const [cities, setCities] = useState([]);
   const [selectedCountryCode, setSelectedCountryCode] = useState("+1"); // Default country code
   const [buttonState, setButtonState] = useState("default");
+  const [countrySearch, setCountrySearch] = useState(""); // State for search input
 
   // Update cities based on selected country
   const handleCountryChange = (e) => {
@@ -35,6 +36,16 @@ function Order() {
   const handlePhoneCodeChange = (e) => {
     setSelectedCountryCode(`+${e.target.value}`);
   };
+
+  // Update search input for country
+  const handleSearchChange = (e) => {
+    setCountrySearch(e.target.value);
+  };
+
+  // Filter countries based on search input
+  const filteredCountries = countriesData.filter((country) =>
+    country.name.toLowerCase().startsWith(countrySearch.toLowerCase())
+  );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -113,14 +124,36 @@ function Order() {
 
             <div className="form-group">
               <label>Mobile Number:</label>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <input
+                  type="text"
+                  placeholder="Search country"
+                  value={countrySearch}
+                  onChange={handleSearchChange}
+                  style={{
+                    marginBottom: "10px",
+                    width: "100%",
+                    padding: "8px",
+                    fontSize: "16px",
+                  }}
+                />
                 <select
                   name="phoneCode"
                   required
-                  style={{ marginRight: "10px" }}
+                  style={{
+                    marginBottom: "10px",
+                    width: "100%",
+                    padding: "8px",
+                  }}
                   onChange={handlePhoneCodeChange}
                 >
-                  {countriesData.map((country) => (
+                  {filteredCountries.map((country) => (
                     <option key={country.iso2} value={country.phone_code}>
                       +{country.phone_code} ({country.name})
                     </option>
@@ -134,13 +167,19 @@ function Order() {
                   pattern="[0-9]{8,11}"
                   title="Mobile number should be 8 to 11 digits"
                   maxLength="11"
+                  style={{ width: "100%", padding: "8px", fontSize: "16px" }}
                 />
               </div>
             </div>
 
             <div className="form-group">
               <label>Country:</label>
-              <select name="country" required onChange={handleCountryChange}>
+              <select
+                name="country"
+                required
+                onChange={handleCountryChange}
+                style={{ padding: "8px", fontSize: "16px" }}
+              >
                 <option value="">Select your country</option>
                 {countriesData.map((country) => (
                   <option key={country.iso2} value={country.iso2}>
@@ -152,7 +191,11 @@ function Order() {
 
             <div className="form-group">
               <label>City:</label>
-              <select name="city" required>
+              <select
+                name="city"
+                required
+                style={{ padding: "8px", fontSize: "16px" }}
+              >
                 <option value="">Select your city</option>
                 {cities.map((city) => (
                   <option key={city.id} value={city.name}>
