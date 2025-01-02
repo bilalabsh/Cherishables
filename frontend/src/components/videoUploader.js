@@ -3,7 +3,7 @@ import "../styles/videouploader.css";
 
 const VideoUploader = () => {
   const cloudinaryRef = useRef();
-  const videoRefs = [useRef(), useRef(), useRef()]; // Add a ref for the third video
+  const videoRefs = [useRef(), useRef(), useRef(), useRef()]; // Add a ref for the third video
 
   useEffect(() => {
     // Ensure Cloudinary script is loaded
@@ -20,7 +20,9 @@ const VideoUploader = () => {
     // Initialize Cloudinary Video Player for all videos
     videoRefs.forEach((ref, index) => {
       if (ref.current) {
-        console.log(`Initializing Cloudinary Video Player for video ${index + 1}...`);
+        console.log(
+          `Initializing Cloudinary Video Player for video ${index + 1}...`
+        );
         cloudinaryRef.current.videoPlayer(ref.current, {
           cloud_name: "dqeakzmb5",
           publicId:
@@ -28,12 +30,14 @@ const VideoUploader = () => {
               ? "Snapinsta.app_video_8546D61B807673A3EEB85E1D38F6F0BF_video_dashinit_icjvwo"
               : index === 1
               ? "Snapinsta.app_video_8E459C3BF5C7A6DB2B9EE30202A7A383_video_dashinit_jqytm5"
-              : "video_3_acylwj",
+              : index === 2
+              ? "video_3_acylwj"
+              : "https://res.cloudinary.com/dqeakzmb5/video/upload/v1735826245/video4_suyfjf.mp4",
           autoplay: false,
-          quality: "auto", // Automatically optimize quality based on user bandwidth
-          format: "mp4", // Use mp4 format for best compatibility
-          streaming: true, // Enable adaptive streaming (HLS/DASH)
-          showLogo: false, // Hide Cloudinary logo
+          quality: "auto",
+          format: "mp4",
+          streaming: true,
+          showLogo: false,
         });
       } else {
         console.error(`Video reference not found for video ${index + 1}.`);
@@ -99,8 +103,8 @@ const VideoUploader = () => {
             Every cherished memory begins with a story. Ours started with a
             simple idea—to capture the most tender, intimate moments in a way
             that lasts forever. Watch how our journey unfolded, and discover how
-            we transform the essence of your most precious memories into beautiful,
-            lasting keepsakes.
+            we transform the essence of your most precious memories into
+            beautiful, lasting keepsakes.
           </h1>
         </div>
         <div style={styles.videoWrapper}>
@@ -120,10 +124,10 @@ const VideoUploader = () => {
             A Mother's Love, Immortalized: The Story Behind the Keepsake
           </h2>
           <h1 style={styles.h3}>
-            Watch as we bring to life the cherished memory of a 6-month-old's tiny
-            hand, preserved in both 2D and 3D artistry. This keepsake isn't just
-            a decoration; it's a testament to the moments that shape our lives,
-            captured by Cherishables to be treasured forever.
+            Watch as we bring to life the cherished memory of a 6-month-old's
+            tiny hand, preserved in both 2D and 3D artistry. This keepsake isn't
+            just a decoration; it's a testament to the moments that shape our
+            lives, captured by Cherishables to be treasured forever.
           </h1>
         </div>
         <div style={styles.videoWrapper}>
@@ -141,14 +145,34 @@ const VideoUploader = () => {
         <div style={styles.textBoxWrapper}>
           <h2 style={styles.heading}>Moments of Magic</h2>
           <h1 style={styles.h3}>
-            A captivating journey through the magic of creating timeless memories.
-            Dive into the artistry and emotion behind every keepsake we bring to life.
+            A captivating journey through the magic of creating timeless
+            memories. Dive into the artistry and emotion behind every keepsake
+            we bring to life.
           </h1>
         </div>
         <div style={styles.videoWrapper}>
           <video
             ref={videoRefs[2]}
             data-cld-public-id="video_3_acylwj"
+            controls
+            style={styles.video}
+          />
+        </div>
+      </div>
+
+      {/* Fourth Video and Text Box */}
+      <div style={styles.section}>
+        <div style={styles.textBoxWrapper}>
+          <h2 style={styles.heading}>A New Chapter</h2>
+          <h1 style={styles.h3}>
+            Experience the next step in our journey as we unveil new ways to
+            cherish and preserve your most treasured moments.
+          </h1>
+        </div>
+        <div style={styles.videoWrapper}>
+          <video
+            ref={videoRefs[3]}
+            data-cld-public-id="https://res.cloudinary.com/dqeakzmb5/video/upload/v1735826245/video4_suyfjf.mp4"
             controls
             style={styles.video}
           />
