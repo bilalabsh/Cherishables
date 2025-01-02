@@ -2,6 +2,8 @@ import Navbar from "../components/navbar.tsx";
 import ProductCatalog from "../components/catalog";
 import Footer from "../components/Footer";
 import "../styles/homepage.css";
+import VideoUploader from "../components/videoUploader";
+
 
 const HomePage = () => {
 
@@ -14,7 +16,9 @@ const HomePage = () => {
       <section className="hero-section">
         <ProductCatalog />
       </section>
-      
+      <section>
+        <VideoUploader />
+      </section>
       <section>
         <Footer />
       </section>

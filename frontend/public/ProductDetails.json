@@ -3,6 +3,50 @@
     {
       "mainCategory": "Infants",
       "subCategories": {
+        "3D": [
+          {
+            "id": "Infants-3D-1",
+            "name": "Infants 3D Product 1",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752422/3D_Infants_2_exix50.jpg",
+            "review": "A wonderful keepsake for toddlers.",
+            "author": "John D."
+          },
+          {
+            "id": "Infants-3D-2",
+            "name": "Infants 3D Product 2",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752434/3D_Infants_4_dup04h.jpg",
+            "review": "A perfect way to capture milestones.",
+            "author": "Jane S."
+          },
+          {
+            "id": "Infants-3D-3",
+            "name": "Infants 3D Product 3",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752440/3D_Infants_5_ajvsxj.jpg",
+            "review": "Great quality and design.",
+            "author": "Alice P."
+          },
+          {
+            "id": "Infants-3D-4",
+            "name": "Infants 3D Product 4",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752446/3D_Infants_6_vtfbpw.webp",
+            "review": "Adorable and unique.",
+            "author": "Michael T."
+          },
+          {
+            "id": "Infants-3D-5",
+            "name": "Infants 3D Product 5",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735754161/3D_Infants_7_cwlgpj.jpg",
+            "review": "Highly recommended.",
+            "author": "Sophia M."
+          },
+          {
+            "id": "Infants-3D-6",
+            "name": "Infants 3D Product 6",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752457/3D_Infants_8_rqp5jm.jpg",
+            "review": "Perfectly captures the moment.",
+            "author": "David G."
+          }
+        ],
         "2D": [
           {
             "id": "Infants-2D-1",
@@ -61,51 +105,7 @@
           }
           
         ],
-        "3D": [
-          {
-            "id": "Infants-3D-1",
-            "name": "Infants 3D Product 1",
-            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752422/3D_Infants_2_exix50.jpg",
-            "review": "A wonderful keepsake for toddlers.",
-            "author": "John D."
-          },
-          {
-            "id": "Infants-3D-2",
-            "name": "Infants 3D Product 2",
-            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752434/3D_Infants_4_dup04h.jpg",
-            "review": "A perfect way to capture milestones.",
-            "author": "Jane S."
-          },
-          {
-            "id": "Infants-3D-3",
-            "name": "Infants 3D Product 3",
-            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752440/3D_Infants_5_ajvsxj.jpg",
-            "review": "Great quality and design.",
-            "author": "Alice P."
-          },
-          {
-            "id": "Infants-3D-4",
-            "name": "Infants 3D Product 4",
-            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752446/3D_Infants_6_vtfbpw.webp",
-            "review": "Adorable and unique.",
-            "author": "Michael T."
-          },
-          {
-            "id": "Infants-3D-5",
-            "name": "Infants 3D Product 5",
-            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735754161/3D_Infants_7_cwlgpj.jpg",
-            "review": "Highly recommended.",
-            "author": "Sophia M."
-          },
-          {
-            "id": "Infants-3D-6",
-            "name": "Infants 3D Product 6",
-            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752457/3D_Infants_8_rqp5jm.jpg",
-            "review": "Perfectly captures the moment.",
-            "author": "David G."
-          }
-        ],
-        "Imposed":[
+        "Embossed":[
           {
             "id": "Infants-Imposed-1",
             "name": "Infants Imposed Product 1",
@@ -148,36 +148,23 @@
             "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752476/3D_Teens_3_x8mn7i.jpg",
             "review": "Amazing details.",
             "author": "Alice P."
-          },{
-            "id": "Teenagers-3D-4",
-            "name": "Teenagers 3D Product 4",
-            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752480/3D_Teens_4_gsfw2v.jpg",
-            "review": "A unique keepsake.",
-            "author": "Michael T."
           }
-        ]
+        ],
+        "2D": [
+          {
+            "id": "Teenagers-2D-1",
+            "name": "Teenagers 2D Product 1",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752480/3D_Teens_4_gsfw2v.jpg",
+            "review": "Perfect for teens.",
+            "author": "John D."
+          }]
+        
       }
     },
 
     {
       "mainCategory": "Family",
       "subCategories": {
-        "2D": [
-          {
-            "id": "Family-2D-1",
-            "name": "Family 2D Product 1",
-            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735754617/2D_fam_5_r7qtpx.jpg",
-            "review": "A unique keepsake.",
-            "author": "John D."
-          },
-          {
-            "id": "Family-2D-2",
-            "name": "Family 2D Product 2",
-            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735754687/2D_fam_1_xzdvbe.jpg",
-            "review": "Beautiful and timeless.",
-            "author": "Jane S."
-          }
-        ],
         "3D": [
           {
             "id": "Family-3D-1",
@@ -198,6 +185,22 @@
             "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735752411/3D_fam_3_olebah.jpg",
             "review": "Amazing details.",
             "author": "Alice P."
+          }
+        ],
+        "2D": [
+          {
+            "id": "Family-2D-1",
+            "name": "Family 2D Product 1",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735754617/2D_fam_5_r7qtpx.jpg",
+            "review": "A unique keepsake.",
+            "author": "John D."
+          },
+          {
+            "id": "Family-2D-2",
+            "name": "Family 2D Product 2",
+            "image": "https://res.cloudinary.com/dqeakzmb5/image/upload/v1735754687/2D_fam_1_xzdvbe.jpg",
+            "review": "Beautiful and timeless.",
+            "author": "Jane S."
           }
         ]
       }
