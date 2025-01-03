@@ -113,12 +113,12 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/stories" onClick={() => setMenuOpen(false)}>
-            Stories
+            Reviews
           </Link>
         </li>
         <li>
           <Link to="/gallery" onClick={() => setMenuOpen(false)}>
-            Gallery
+            Catalogue
           </Link>
         </li>
         <li>

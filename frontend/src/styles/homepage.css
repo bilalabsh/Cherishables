@@ -114,6 +114,7 @@
 /* Scrolling text animation */
 .scrolling-text p {
     display: inline-block;
+    white-space: nowrap;
     padding-left: 100%;
     animation: scroll-left 20s linear infinite;
 }
@@ -136,7 +137,7 @@
     }
 
     100% {
-        transform: translateX(100%);
+        transform: translateX(60%);
         /* End completely off the left */
     }
 }

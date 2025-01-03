@@ -49,15 +49,15 @@ const HomePage = () => {
               <h2>A Heartfelt Relaunch</h2>
               <p>
                 We’re thrilled to relaunch and share love and happiness once
-                again. A heartfelt thank you to our loyal clients, who send
+                again. A heartfelt thank you to our old clients, who send
                 messages of joy, sharing how their children have grown and how
-                those cherished impressions are even more loved today. To our
-                new clients, your support and enthusiasm mean the world. We are
-                the Cherishables Family, united by beautiful memories and
-                beautiful people.
+                their little ones are grown up and how their little impressions
+                are now so much more loved. To our new clients, your support and
+                enthusiasm mean the world. We are the Cherishables Family,
+                united by beautiful memories and beautiful people.
               </p>
             </div>
-        
+
             <div className="image-section">
               <img
                 src={require("../assets/logofinal.png")}
@@ -68,7 +68,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      
       <section>
         <div className="category-controls">
           <a href="/appointment" className="order-now-button">

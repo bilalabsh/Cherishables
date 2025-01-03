@@ -21,25 +21,26 @@ const AboutUs = () => {
             <h2>Our Journey of Love</h2>
             <p>
               Our journey began in 2003, preserving hand and foot impressions in
-              metal, which are unbreakable symbolizing the unbreakable bond of love. We never imagined
-              that Mideast Medical Centre, one of Clifton's top hospitals, would
-              be our first outlet. When we offered our brochures, owner Mr.
-              Abdul Ghaffar Jatoi was overjoyed—it was exactly what he'd been
-              seeking. Soon, our impressions were showcased on every floor. From
-              newborns' first days to life's milestones, we captured memories
-              across all ages. However, when Mideast became Ocean Mall, new
-              challenges led to the closure of Cherishables. But now, we're
-              back, ready to spread love and joy once more
+              metal, which are unbreakable symbolizing the unbreakable bond of
+              love. We never imagined that Mideast Medical Centre, one of
+              Clifton's top hospitals, would be our first outlet. When we
+              offered our brochures, owner Mr. Abdul Ghaffar Jatoi was
+              overjoyed—it was exactly what he'd been seeking. Soon, our
+              impressions were showcased on every floor. From newborns' first
+              days to life's milestones, we captured memories across all ages.
+              However, when Mideast became Ocean Mall, new challenges led to the
+              closure of Cherishables. But now, we're back, ready to spread love
+              and joy once more
             </p>
             <h2>A Heartfelt Relaunch</h2>
             <p>
               We’re thrilled to relaunch and share love and happiness once
-              again. A heartfelt thank you to our loyal clients, who send
-              messages of joy, sharing how their children have grown and how
-              those cherished impressions are even more loved today. To our new
-              clients, your support and enthusiasm mean the world. We are the
-              Cherishables Family, united by beautiful memories and beautiful
-              people.
+              again. A heartfelt thank you to our old clients, who send messages
+              of joy, sharing how their children have grown and how their little
+              ones are grown up and how their little impressions are now so much
+              more loved. To our new clients, your support and enthusiasm mean
+              the world. We are the Cherishables Family, united by beautiful
+              memories and beautiful people.
             </p>
           </div>
 

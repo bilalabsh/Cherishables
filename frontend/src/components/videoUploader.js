@@ -121,13 +121,12 @@ const VideoUploader = () => {
       <div style={styles.section}>
         <div style={styles.textBoxWrapper}>
           <h2 style={styles.heading}>
-            A Mother's Love, Immortalized: The Story Behind the Keepsake
+            A Mother's Love: The Story Behind the Keepsake
           </h2>
           <h1 style={styles.h3}>
-            Watch as we bring to life the cherished memory of a 6-month-old's
-            tiny hand, preserved in 2D, 3D and embossed.. This keepsake isn't
-            just a decoration; it's a testament to the moments that shape our
-            lives, captured by Cherishables to be treasured forever.
+            This keepsake isn't just a decoration; it's a testament to the
+            moments that shape our lives, captured by Cherishables to be
+            treasured forever.
           </h1>
         </div>
         <div style={styles.videoWrapper}>
@@ -146,8 +145,8 @@ const VideoUploader = () => {
           <h2 style={styles.heading}>Moments of Magic</h2>
           <h1 style={styles.h3}>
             A captivating journey through the magic of creating timeless
-            memories. Dive into the artistry and emotion behind every keepsake
-            we bring to life.
+            memories. Dive into the emotion behind each meticulously preserved
+            timeless keepsake and happy memorabilia.
           </h1>
         </div>
         <div style={styles.videoWrapper}>

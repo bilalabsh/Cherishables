@@ -1,7 +1,14 @@
 // components/Footer.tsx
 import React from "react";
 import "../styles/footer.css"; // Import the CSS file for styling
-import { FaInstagram, FaFacebook } from "react-icons/fa"; // Import icons from react-icons
+import {
+  FaBars,
+  FaTimes,
+  FaWhatsapp,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -22,9 +29,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p>
-            ©2024 - Cherishables. All Rights Reserved. The content on this site
-            is for informational purposes only and is not intended as
-            professional advice.
+            ©2024 - Cherishables. All Rights Reserved. 
           </p>
           <p>
             All products displayed are for personal use and should not be used
@@ -32,12 +37,28 @@ const Footer = () => {
           </p>
           <div className="footer-icons">
             <a
+              href="https://wa.me/923252802878"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <FaWhatsapp className="social-icon whatsapp" />
+            </a>
+            <a
               href="https://www.instagram.com/cherishables_/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
             >
               <FaInstagram />
+            </a>
+            <a
+              href="https://linkedin.com/company/cherishables-co"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+            >
+              <FaLinkedin className="social-icon linkedin"/>
             </a>
             <a
               href="https://www.facebook.com/cherishables.art"
