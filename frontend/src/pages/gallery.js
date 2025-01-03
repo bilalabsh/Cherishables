@@ -36,7 +36,7 @@ const Gallery = () => {
     <div>
       <Navbar />
       <div className="gallery-container">
-        <h1 className="gallery-title">Catalogue</h1>
+        <h1 className="gallery-title">Cherishables Catalogue</h1>
         {products.map((category) => (
           <CategoryBlock
             key={category.mainCategory}

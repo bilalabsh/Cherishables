@@ -115,9 +115,9 @@
 .scrolling-text p {
     display: inline-block;
     white-space: nowrap;
-    padding-left: 100%;
     animation: scroll-left 20s linear infinite;
 }
+
 
 .video-section {
     width: 100%;
@@ -132,12 +132,12 @@
 /* Keyframes for smooth scrolling */
 @keyframes scroll-left {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-250%);
         /* Start completely off the right */
     }
 
     100% {
-        transform: translateX(60%);
+        transform: translateX(250%);
         /* End completely off the left */
     }
 }
@@ -163,6 +163,25 @@
         font-size: 1.1rem;
         /* Smaller subheading font */
     }
+                .scrolling-text p {
+                    display: inline-block;
+                    white-space: nowrap;
+                    animation: scroll-left-mobile 10s linear infinite;
+                    /* Faster scrolling for smaller screens */
+                }
+        
+                @keyframes scroll-left-mobile {
+                    0% {
+                        transform: translateX(-120%);
+                        /* Start completely off the right */
+                    }
+        
+                    100% {
+                        transform: translateX(100%);
+                        /* End completely off the left */
+                    }
+                }
+    
 }
 
 /* Medium devices (tablets, 576px to 991.98px) */
