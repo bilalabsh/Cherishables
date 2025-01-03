@@ -28,7 +28,7 @@ h1 {
 h2 {
     font-size: 2em;
     margin: 15px 0;
-    background: linear-gradient(to right, #7b5d4d, #d9c3a3);
+    background: linear-gradient(to right, #7b5d4d, #a2927b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

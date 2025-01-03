@@ -80,7 +80,7 @@ const VideoUploader = () => {
             // If fullscreen is disabled
             videoRef.current.style.width = "600px"; // Reset to original width
             videoRef.current.style.height = "338px"; // Reset to original height
-            videoRef.current.style.objectFit = "cover"; // Reset to original object-fit
+            videoRef.current.style.objectFit = "contain"; // Reset to original object-fit
           }
         }
       });
@@ -205,9 +205,10 @@ const styles = {
     width: "100%", // Ensure the video wrapper takes full width
   },
   video: {
-    width: "600px", // Fixed width
+    width: "100%", // Fixed width
+    maxWidth: "600px", // Set maximum width
     height: "338px", // Fixed height (16:9 aspect ratio)
-    objectFit: "cover", // Crop to fit the dimensions if needed
+    objectFit: "contain", // Crop to fit the dimensions if needed
     borderRadius: "10px",
     display: "block", // Ensure the video is displayed as a block element
   },
