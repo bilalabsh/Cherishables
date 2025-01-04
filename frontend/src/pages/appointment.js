@@ -1,15 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/order.css";
 import Navbar2 from "../components/navbar2.tsx";
 import "flag-icons/css/flag-icons.min.css";
-import countriesData from "../assets/countries.json";
-import citiesData from "../assets/cities.json";
+
 
 function Order() {
+  const [countriesData, setCountriesData] = useState([]);
+  const [citiesData, setCitiesData] = useState([]);
   const [cities, setCities] = useState([]);
   const [selectedCountryCode, setSelectedCountryCode] = useState("+1"); // Default country code
   const [buttonState, setButtonState] = useState("default");
   const [countrySearch, setCountrySearch] = useState(""); // State for search input
+
+  // Fetch countries and cities data from public folder
+  useEffect(() => {
+    const fetchCountries = async () => {
+      try {
+        const response = await fetch("/countries.json");
+        const data = await response.json();
+        setCountriesData(data);
+      } catch (error) {
+        console.error("Error fetching countries data:", error);
+      }
+    };
+
+    const fetchCities = async () => {
+      try {
+        const response = await fetch("/cities.json");
+        const data = await response.json();
+        setCitiesData(data);
+      } catch (error) {
+        console.error("Error fetching cities data:", error);
+      }
+    };
+
+    fetchCountries();
+    fetchCities();
+  }, []);
 
   // Update cities based on selected country
   const handleCountryChange = (e) => {
@@ -63,13 +90,16 @@ function Order() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "http://cherishablesbackend-production.up.railway.app",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         setButtonState("submitted");

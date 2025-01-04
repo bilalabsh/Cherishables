@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/homepage.css";
 import "../styles/aboutUs.css";
 import VideoUploader from "../components/videoUploader";
-
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
 
@@ -50,10 +50,11 @@ const HomePage = () => {
               <p>
                 We’re thrilled to relaunch and share love and happiness once
                 again. A heartfelt thank you to our old clients, who send
-                messages of joy, sharing how their children have grown and how their little impressions
-                are now so much more loved. To our new clients, your support and
-                enthusiasm mean the world. We are the Cherishables Family,
-                united by beautiful memories and beautiful people.
+                messages of joy, sharing how their children have grown and how
+                their little impressions are now so much more loved. To our new
+                clients, your support and enthusiasm mean the world. We are the
+                Cherishables Family, united by beautiful memories and beautiful
+                people.
               </p>
             </div>
 
@@ -69,9 +70,9 @@ const HomePage = () => {
 
       <section>
         <div className="category-controls">
-          <a href="/appointment" className="order-now-button">
+          <Link to="/appointment" className="order-now-button">
             Book Your Appointment !
-          </a>
+          </Link>
         </div>
       </section>
       <section>
