@@ -230,7 +230,12 @@
         gap: 1.5em;
         
     }
-
+    .product-card-front img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 0.2rem;
+    }
     .product-card {
         width: 130px;
         height: 130px;

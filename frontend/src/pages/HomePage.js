@@ -50,8 +50,7 @@ const HomePage = () => {
               <p>
                 We’re thrilled to relaunch and share love and happiness once
                 again. A heartfelt thank you to our old clients, who send
-                messages of joy, sharing how their children have grown and how
-                their little ones are grown up and how their little impressions
+                messages of joy, sharing how their children have grown and how their little impressions
                 are now so much more loved. To our new clients, your support and
                 enthusiasm mean the world. We are the Cherishables Family,
                 united by beautiful memories and beautiful people.

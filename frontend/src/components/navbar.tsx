@@ -7,6 +7,7 @@ import {
   FaLinkedin,
   FaFacebook,
   FaInstagram,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -99,6 +100,12 @@ const Navbar = () => {
         <li>
           <Link to="/about">About Us</Link>
         </li>
+        <li>
+          {/* Contact Us Button */}
+          <a href="tel:+923252802878" className="contact-us-button">
+            <FaPhoneAlt /> Contact Us
+          </a>
+        </li>
       </ul>
 
       {/* Mobile Navigation Sidebar */}
@@ -125,6 +132,16 @@ const Navbar = () => {
           <Link to="/about" onClick={() => setMenuOpen(false)}>
             About Us
           </Link>
+        </li>
+        <li>
+          {/* Contact Us Button */}
+          <a
+            href="tel:+923252802878"
+            onClick={() => setMenuOpen(false)}
+            className="contact-us-button"
+          >
+            <FaPhoneAlt /> Contact Us
+          </a>
         </li>
       </ul>
 
