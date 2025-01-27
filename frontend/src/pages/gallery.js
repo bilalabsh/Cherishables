@@ -63,23 +63,8 @@ const CategoryBlock = ({ title, subCategories }) => {
         ))}
       </div>
       <div className="see-more-buttons">
-        {title === "Infants" && (
-          <Link to="/product/Infants" className="see-more-btn">
-            View More
-          </Link>
-        )}
-        {title === "Teenagers" && (
-          <Link to="/product/Teenagers" className="see-more-btn">
-            View More
-          </Link>
-        )}
-        {title === "Family" && (
-          <Link to="/product/Family" className="see-more-btn">
-            View More
-          </Link>
-        )}
-        {title === "Couples" && (
-          <Link to="/product/Couples" className="see-more-btn">
+        {["Infants", "Teenagers", "Family", "Couples"].includes(title) && (
+          <Link to={`/product/${title}`} className="see-more-btn">
             View More
           </Link>
         )}

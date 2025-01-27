@@ -171,12 +171,12 @@
                 }
         
                 @keyframes scroll-left-mobile {
-                    0% {
+                    100% {
                         transform: translateX(-120%);
                         /* Start completely off the right */
                     }
         
-                    100% {
+                    0% {
                         transform: translateX(100%);
                         /* End completely off the left */
                     }

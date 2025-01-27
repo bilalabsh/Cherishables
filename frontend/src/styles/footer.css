@@ -1,6 +1,6 @@
 /* components/Footer.css */
 .footer {
-    color:  #31221d;
+    color: #31221d;
     padding: 20px 40px;
     font-family: Arial, sans-serif;
 }
@@ -30,14 +30,15 @@
 }
 
 .footer-links a {
-    color:  #31221d;
+    color: #31221d;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+    color: #0073e6;
 }
 
 .footer-line {
@@ -54,7 +55,7 @@
 }
 
 .footer-icons {
-    margin-top: 5px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -63,9 +64,130 @@
 .footer-icons a {
     color: #31221d;
     font-size: 24px;
+    transition: color 0.3s ease;
 }
 
 .footer-icons a:hover {
     color: #0073e6;
-    /* Add hover effect for social icons */
+}
+
+/* ----------- Media Queries ----------- */
+
+/* Small phones (320px - 480px) */
+@media only screen and (max-width: 480px) {
+    .footer {
+        padding: 10px 15px;
+    }
+
+    .footer-logo-text {
+        font-size: 16px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+    }
+
+    .footer-icons a {
+        font-size: 18px;
+    }
+
+    .footer-top {
+        gap: 10px;
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .footer {
+        padding: 15px 25px;
+    }
+
+    .footer-logo-text {
+        font-size: 18px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+
+    .footer-icons a {
+        font-size: 20px;
+    }
+}
+
+/* Small laptops (769px - 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+        padding: 20px 30px;
+    }
+
+    .footer-logo-text {
+        font-size: 22px;
+    }
+
+    .footer-links a {
+        font-size: 15px;
+    }
+
+    .footer-bottom {
+        font-size: 13px;
+    }
+
+    .footer-icons a {
+        font-size: 22px;
+    }
+}
+
+/* Desktops (1025px - 1366px) */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    .footer {
+        padding: 25px 40px;
+    }
+
+    .footer-logo-text {
+        font-size: 24px;
+    }
+
+    .footer-links a {
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+    }
+
+    .footer-icons a {
+        font-size: 24px;
+    }
+}
+
+/* Large desktops (1367px and above) */
+@media only screen and (min-width: 1367px) {
+    .footer {
+        padding: 30px 50px;
+    }
+
+    .footer-logo-text {
+        font-size: 26px;
+    }
+
+    .footer-links a {
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        font-size: 15px;
+    }
+
+    .footer-icons a {
+        font-size: 26px;
+    }
 }

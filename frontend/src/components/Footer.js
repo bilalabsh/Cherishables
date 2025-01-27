@@ -1,9 +1,7 @@
 // components/Footer.tsx
 import React from "react";
-import "../styles/footer.css"; // Import the CSS file for styling
+import "../styles/footer.css";
 import {
-  FaBars,
-  FaTimes,
   FaWhatsapp,
   FaLinkedin,
   FaFacebook,
@@ -14,23 +12,30 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
+        {/* Top Section */}
         <div className="footer-top">
           <div className="footer-logo">
             <h1 className="footer-logo-text">Cherishables</h1>
           </div>
           <div className="footer-links">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/gallery">Catalogue</a>
+            <a href="/" aria-label="Home">
+              Home
+            </a>
+            <a href="/about" aria-label="About Us">
+              About
+            </a>
+            <a href="/gallery" aria-label="Catalogue">
+              Catalogue
+            </a>
           </div>
         </div>
 
+        {/* Divider Line */}
         <div className="footer-line"></div>
 
+        {/* Bottom Section */}
         <div className="footer-bottom">
-          <p>
-            ©2024 - Cherishables. All Rights Reserved. 
-          </p>
+          <p>©2024 - Cherishables. All Rights Reserved.</p>
           <p>
             All products displayed are for personal use and should not be used
             for any commercial purposes without prior consent.
@@ -41,14 +46,16 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
+              aria-label="WhatsApp"
             >
-              <FaWhatsapp className="social-icon whatsapp" />
+              <FaWhatsapp />
             </a>
             <a
               href="https://www.instagram.com/cherishables_/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
+              aria-label="Instagram"
             >
               <FaInstagram />
             </a>
@@ -57,14 +64,16 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
+              aria-label="LinkedIn"
             >
-              <FaLinkedin className="social-icon linkedin"/>
+              <FaLinkedin />
             </a>
             <a
               href="https://www.facebook.com/cherishables.art"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
+              aria-label="Facebook"
             >
               <FaFacebook />
             </a>

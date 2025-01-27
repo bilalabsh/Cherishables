@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const sidebarRef = useRef(null);
+  const sidebarRef = useRef<HTMLUListElement>(null);
 
   // Handle scrolling
   useEffect(() => {
@@ -29,7 +29,7 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [menuOpen]); // Depend on menuOpen to ensure state is up-to-date
+  }, [menuOpen]);
 
   // Toggle menu open/close
   const toggleMenu = () => {
@@ -38,8 +38,8 @@ const Navbar = () => {
 
   // Close menu if clicked outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(event.target) && menuOpen) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node) && menuOpen) {
         setMenuOpen(false);
       }
     };
@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      {/* WhatsApp icon */}
+      {/* Social Icons */}
       <div className="social-icons">
         <a
           href="https://wa.me/923252802878"
@@ -101,7 +101,6 @@ const Navbar = () => {
           <Link to="/about">About Us</Link>
         </li>
         <li>
-          {/* Contact Us Button */}
           <a href="tel:+923252802878" className="contact-us-button">
             <FaPhoneAlt /> Contact Us
           </a>
@@ -134,7 +133,6 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          {/* Contact Us Button */}
           <a
             href="tel:+923252802878"
             onClick={() => setMenuOpen(false)}
