@@ -103,11 +103,11 @@ const VideoUploader = () => {
           <h2 style={styles.heading}>
             A Mother's Love: The Story Behind the Keepsake
           </h2>
-          <h1 style={styles.h3}>
-            This keepsake isn't just a decoration; it's a testament to the
+          <p style={{ fontSize: '1.1rem' }}>
+            This keepsake isn't just a decoration, it's a testament to the
             moments that shape our lives, captured by Cherishables to be
             treasured forever.
-          </h1>
+          </p>
         </div>
         <div style={styles.videoWrapper}>
           <video
@@ -123,11 +123,11 @@ const VideoUploader = () => {
       <div style={styles.section}>
         <div style={styles.textBoxWrapper}>
           <h2 style={styles.heading}>Moments of Magic</h2>
-          <h1 style={styles.h3}>
+          <p style={{ fontSize: '1.1rem' }}>
             A captivating journey through the magic of creating timeless
             memories. Dive into the emotion behind each meticulously preserved
             timeless keepsake and happy memorabilia.
-          </h1>
+          </p>
         </div>
         <div style={styles.videoWrapper}>
           <video
@@ -143,10 +143,10 @@ const VideoUploader = () => {
       <div style={styles.section}>
         <div style={styles.textBoxWrapper}>
           <h2 style={styles.heading}>A New Chapter</h2>
-          <h1 style={styles.h3}>
+          <p style={{ fontSize: '1.1rem' }}>
             Experience the next step in our journey as we unveil new ways to
             cherish and preserve your most treasured moments.
-          </h1>
+          </p>
         </div>
         <div style={styles.videoWrapper}>
           <video
