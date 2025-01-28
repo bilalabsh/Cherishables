@@ -10,28 +10,15 @@ const AboutUs = () => {
       <div className="about-us-container">
         <div className="about-us-content">
           <div className="text-section">
-            <h1>Hi, we're Cherishables</h1>
-            <p>
-              Cherishables, born from family, love, and togetherness, is
-              dedicated to preserving life's most beautiful moments. Since 2003,
-              we've captured hand and foot impressions to symbolize the
-              unbreakable bond of love.
-            </p>
-
-            {/* Image moved here */}
-            <div className="image-section">
-              <img
-                src={require("../assets/logofinal.png")}
-                alt="Cherishables Team"
-                style={{
-                  width: "100%",
-                  maxWidth: "500px",
-                  height: "auto",
-                  borderRadius: "10px",
-                }}
-              />
+            <div className="text-section-upper">
+              <h1>Hi, we're Cherishables</h1>
+              <p>
+                Cherishables, born from family, love, and togetherness, is
+                dedicated to preserving life's most beautiful moments. Since
+                2003, we've captured hand and foot impressions to symbolize the
+                unbreakable bond of love.
+              </p>
             </div>
-
             <h2>Our Journey of Love</h2>
             <p>
               Our journey began in 2003, preserving hand and foot impressions in
@@ -59,6 +46,20 @@ const AboutUs = () => {
           </div>
 
           <div className="media-section">
+            {/* Image section shifted up */}
+            <div className="image-section">
+              <img
+                src={require("../assets/logofinal.png")}
+                alt="Cherishables Team"
+                style={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  height: "auto",
+                  borderRadius: "10px",
+                }}
+              />
+            </div>
+            {/* Video next to text section */}
             <div className="video-container">
               <video
                 controls
