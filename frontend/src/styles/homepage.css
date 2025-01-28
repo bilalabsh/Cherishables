@@ -111,6 +111,31 @@
     
 }
 
+.order-now-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .order-now-button span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .order-now-button small {
+    font-size: 15px;
+    margin-top: 4px;
+    font-weight: normal;
+  }
+  
 /* Scrolling text animation */
 .scrolling-text p {
     display: inline-block;

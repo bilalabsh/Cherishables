@@ -69,12 +69,15 @@ const HomePage = () => {
       </section>
 
       <section>
-        <div className="category-controls">
-          <Link to="/appointment" className="order-now-button">
-            Book Your Appointment !
-          </Link>
-        </div>
-      </section>
+  <div className="category-controls">
+    <Link to="/appointment" className="order-now-button">
+      <span>Book Your Appointment !</span>
+      <br/>
+      <small>~ All prices begin at 9k ~</small>
+    </Link>
+  </div>
+</section>
+
       <section>
         <Footer />
       </section>
