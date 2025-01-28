@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
 
   return (
+    <div>
     <div className="homepage">
       <Navbar />
       <div className="scrolling-text">
@@ -68,7 +69,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section>
+  <section>
   <div className="category-controls">
     <Link to="/appointment" className="order-now-button">
       <span>Book Your Appointment !</span>
@@ -77,10 +78,8 @@ const HomePage = () => {
     </Link>
   </div>
 </section>
-
-      <section>
+    </div>
         <Footer />
-      </section>
     </div>
   );
 };
