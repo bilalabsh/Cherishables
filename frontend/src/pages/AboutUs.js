@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Navbar from "../components/navbar.tsx";
 import Footer from "../components/Footer";
 import "../styles/aboutUs.css";
@@ -30,24 +30,53 @@ const AboutUs = () => {
               days to life's milestones, we captured memories across all ages.
               However, when Mideast became Ocean Mall, new challenges led to the
               closure of Cherishables. But now, we're back, ready to spread love
-              and joy once more
+              and joy once more.
             </p>
+
             <h2>A Heartfelt Relaunch</h2>
             <p>
               We’re thrilled to relaunch and share love and happiness once
               again. A heartfelt thank you to our old clients, who send messages
-              of joy, sharing how their children have grown and how their little impressions are now so much
-              more loved. To our new clients, your support and enthusiasm mean
-              the world. We are the Cherishables Family, united by beautiful
-              memories and beautiful people.
+              of joy, sharing how their children have grown and how their little
+              impressions are now so much more loved. To our new clients, your
+              support and enthusiasm mean the world. We are the Cherishables
+              Family, united by beautiful memories and beautiful people.
             </p>
           </div>
 
-          <div className="image-section">
-            <img
-              src={require("../assets/logofinal.png")}
-              alt="Cherishables Team"
-            />
+          <div className="media-section">
+            {/* Image section shifted up */}
+            <div className="image-section">
+              <img
+                src={require("../assets/logofinal.png")}
+                alt="Cherishables Team"
+                style={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  height: "auto",
+                  borderRadius: "10px",
+                }}
+              />
+            </div>
+            {/* Video next to text section */}
+            <div className="video-container">
+              <video
+                controls
+                style={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  height: "auto",
+                  objectFit: "contain",
+                  borderRadius: "10px",
+                }}
+              >
+                <source
+                  src="https://res.cloudinary.com/dqeakzmb5/video/upload/v1735826245/Snapinsta.app_video_8546D61B807673A3EEB85E1D38F6F0BF_video_dashinit_icjvwo.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </div>

@@ -132,13 +132,12 @@
 /* Keyframes for smooth scrolling */
 @keyframes scroll-left {
     0% {
-        transform: translateX(-250%);
-        /* Start completely off the right */
+        transform: translateX(250%);
+        
     }
 
     100% {
-        transform: translateX(250%);
-        /* End completely off the left */
+        transform: translateX(-250%);
     }
 }
 /* Media Queries */
@@ -172,12 +171,12 @@
         
                 @keyframes scroll-left-mobile {
                     100% {
-                        transform: translateX(-120%);
+                        transform: translateX(120%);
                         /* Start completely off the right */
                     }
         
                     0% {
-                        transform: translateX(100%);
+                        transform: translateX(-100%);
                         /* End completely off the left */
                     }
                 }

@@ -57,7 +57,7 @@ const VideoUploader = () => {
                 videoRef.current.pause();
                 videoRef.current.muted = false; // Unmute the video after pausing
               }, 10); // Pause after 0.01 seconds
-            })
+            })  
             .catch((error) => {
               console.error("Error playing video:", error);
             });
@@ -95,27 +95,7 @@ const VideoUploader = () => {
 
   return (
     <div style={styles.container}>
-      {/* First Video and Text Box */}
-      <div style={styles.section}>
-        <div style={styles.textBoxWrapper}>
-          <h2 style={styles.heading}>The Journey of Cherishables</h2>
-          <h1 style={styles.h3}>
-            Every cherished memory begins with a story. Ours started with a
-            simple idea—to capture the most tender, intimate moments in a way
-            that lasts forever. Watch how our journey unfolded, and discover how
-            we transform the essence of your most precious memories into
-            beautiful, lasting keepsakes.
-          </h1>
-        </div>
-        <div style={styles.videoWrapper}>
-          <video
-            ref={videoRefs[0]}
-            data-cld-public-id="Snapinsta.app_video_8546D61B807673A3EEB85E1D38F6F0BF_video_dashinit_icjvwo"
-            controls
-            style={styles.video}
-          />
-        </div>
-      </div>
+
 
       {/* Second Video and Text Box */}
       <div style={styles.section}>

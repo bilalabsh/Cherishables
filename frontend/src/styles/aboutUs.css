@@ -52,6 +52,24 @@
   border-radius: 10px;
 }
 
+.media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.video-container {
+  margin-top: 20px;
+  /* Adding margin between the image and video */
+}
+video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
 /* Media Queries */
 
 /* Extra small devices (phones, less than 576px) */
