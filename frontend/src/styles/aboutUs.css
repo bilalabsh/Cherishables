@@ -58,10 +58,12 @@
   align-items: center;
   justify-content: center;
 }
+
 .video-container {
   margin-top: 20px;
   /* Adding margin between the image and video */
 }
+
 video {
   width: 100%;
   max-width: 500px;
@@ -76,30 +78,41 @@ video {
 @media (max-width: 575.98px) {
   .about-us-content {
     flex-direction: column;
-    /* Stack content vertically */
+    gap: 30px;
   }
 
-  .about-us-content .image-section {
+  .text-section {
+    flex-direction: column;
+  }
+
+  .text-section-upper {
     margin-bottom: 20px;
-    /* Add space between image and text */
   }
 
-  .about-us-content h1 {
-    font-size: 2rem;
-    text-align: center;
+  .image-section {
+    order: 2;
+    /* Ensure image comes after text-section-upper */
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
   }
 
-  .about-us-content p {
-    font-size: 1rem;
-    line-height: 1.4;
+  .video-container {
+    order: 3;
+    /* Keep video after image */
+    margin-top: 20px;
   }
 
-  .about-us-content .image-section img {
+  .image-section img {
     max-width: 300px;
-    /* Reduce image size for smaller screens */
+    /* Resize for smaller screens */
+  }
+
+  .video-container video {
+    max-width: 300px;
+    /* Resize for smaller screens */
   }
 }
-
 /* Small devices (portrait tablets and large phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .about-us-content {
