@@ -103,9 +103,9 @@ const VideoUploader = () => {
           <h2 style={styles.heading}>
             A Mother's Love: The Story Behind the Keepsake
           </h2>
-          <p style={{ fontSize: '1.1rem' }}>
+          <p style={styles.p}>
             This keepsake isn't just a decoration, it's a testament to the
-            moments that shape our lives, captured by Cherishables to be
+            moments that shape our lives,<br/> captured by Cherishables to be
             treasured forever.
           </p>
         </div>
@@ -123,9 +123,11 @@ const VideoUploader = () => {
       <div style={styles.section}>
         <div style={styles.textBoxWrapper}>
           <h2 style={styles.heading}>Moments of Magic</h2>
-          <p style={{ fontSize: '1.1rem' }}>
+          <p style={styles.p}>
             A captivating journey through the magic of creating timeless
-            memories. Dive into the emotion behind each meticulously preserved
+            memories.  
+            <br />
+            Dive into the emotion behind each meticulously preserved
             timeless keepsake and happy memorabilia.
           </p>
         </div>
@@ -143,7 +145,7 @@ const VideoUploader = () => {
       <div style={styles.section}>
         <div style={styles.textBoxWrapper}>
           <h2 style={styles.heading}>A New Chapter</h2>
-          <p style={{ fontSize: '1.1rem' }}>
+          <p style={styles.p}>
             Experience the next step in our journey as we unveil new ways to
             cherish and preserve your most treasured moments.
           </p>
@@ -212,6 +214,10 @@ const styles = {
     paddingBottom: "5px", // Space between text and the border
     borderBottom: "3px solid #ddd",
     
+  },
+  p:{
+    fontSize: '1.1rem', 
+    textAlign: 'center',
   },
   textBox: {
     width: "50%",
