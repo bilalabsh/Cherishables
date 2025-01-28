@@ -18,6 +18,20 @@ const AboutUs = () => {
               unbreakable bond of love.
             </p>
 
+            {/* Image moved here */}
+            <div className="image-section">
+              <img
+                src={require("../assets/logofinal.png")}
+                alt="Cherishables Team"
+                style={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  height: "auto",
+                  borderRadius: "10px",
+                }}
+              />
+            </div>
+
             <h2>Our Journey of Love</h2>
             <p>
               Our journey began in 2003, preserving hand and foot impressions in
@@ -45,20 +59,6 @@ const AboutUs = () => {
           </div>
 
           <div className="media-section">
-            {/* Image section shifted up */}
-            <div className="image-section">
-              <img
-                src={require("../assets/logofinal.png")}
-                alt="Cherishables Team"
-                style={{
-                  width: "100%",
-                  maxWidth: "500px",
-                  height: "auto",
-                  borderRadius: "10px",
-                }}
-              />
-            </div>
-            {/* Video next to text section */}
             <div className="video-container">
               <video
                 controls
