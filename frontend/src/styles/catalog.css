@@ -19,7 +19,7 @@
     flex-wrap: nowrap;
     width: 60%;
     position: relative;
-    top: 220%;
+    top: 145%;
 }
 
 /* Product card */
@@ -135,7 +135,7 @@
     .product-card-wrapper {
         width: 110%;
         gap: 0.5em;
-        top: 150%;
+        top: 130%;
     }
     .product-card-front img {
         width: 100%;

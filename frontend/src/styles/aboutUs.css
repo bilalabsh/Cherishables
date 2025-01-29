@@ -58,12 +58,10 @@
   align-items: center;
   justify-content: center;
 }
-
 .video-container {
   margin-top: 20px;
   /* Adding margin between the image and video */
 }
-
 video {
   width: 100%;
   max-width: 500px;
@@ -78,39 +76,33 @@ video {
 @media (max-width: 575.98px) {
   .about-us-content {
     flex-direction: column;
-    gap: 30px;
   }
 
   .text-section {
-    flex-direction: column;
-  }
-
-  .text-section-upper {
-    margin-bottom: 20px;
+    position: relative;
   }
 
   .image-section {
-    order: 2;
-    /* Ensure image comes after text-section-upper */
+    /* Move the image below text-section-upper */
+    position: relative;
     margin-top: 10px;
-    display: flex;
-    justify-content: center;
+    display: block;
   }
 
-  .video-container {
-    order: 3;
-    /* Keep video after image */
+  .media-section {
     margin-top: 20px;
+    /* Keeps video below text and image */
   }
 
   .image-section img {
+    width: 100%;
     max-width: 300px;
-    /* Resize for smaller screens */
+    /* Adjust width for mobile */
   }
 
   .video-container video {
+    width: 100%;
     max-width: 300px;
-    /* Resize for smaller screens */
   }
 }
 /* Small devices (portrait tablets and large phones, 576px and up) */

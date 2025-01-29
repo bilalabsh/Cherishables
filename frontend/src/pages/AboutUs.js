@@ -46,7 +46,7 @@ const AboutUs = () => {
           </div>
 
           <div className="media-section">
-            {/* Image section shifted up */}
+            {/* Image section remains in the same container */}
             <div className="image-section">
               <img
                 src={require("../assets/logofinal.png")}
@@ -59,7 +59,6 @@ const AboutUs = () => {
                 }}
               />
             </div>
-            {/* Video next to text section */}
             <div className="video-container">
               <video
                 controls
