@@ -3,7 +3,23 @@
     padding: 20px;
     background-size: cover;
 }
+.gallery-logo {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    /* Centers image */
+    transition: transform 0.1s ease-in-out;
+    /* Smooth scaling effect */
+    cursor: pointer;
+    /* Indicates it's clickable */
+}
 
+.gallery-logo:hover {
+    transform: scale(1.1);
+    /* Increases size on hover */
+}
 .gallery-title {
     font-family: 'Georgia', serif;
     font-size: 2rem;

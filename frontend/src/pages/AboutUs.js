@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link
 import Navbar from "../components/navbar.tsx";
 import Footer from "../components/Footer";
 import "../styles/aboutUs.css";
@@ -8,6 +9,15 @@ const AboutUs = () => {
     <div>
       <Navbar />
       <div className="about-us-container">
+        <Link to="/">
+                  {" "}
+                  {/* Wrap image inside Link */}
+                  <img
+                    src={require("../assets/lg.png")}
+                    alt="Cherishables"
+                    className="aboutus-logo"
+                  />
+                </Link>
         <div className="about-us-content">
           <div className="text-section">
             <div className="text-section-upper">

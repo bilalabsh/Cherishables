@@ -36,7 +36,16 @@ const Gallery = () => {
     <div>
       <Navbar />
       <div className="gallery-container">
-        <h1 className="gallery-title">Cherishables Catalogue</h1>
+        <Link to="/">
+          {" "}
+          {/* Wrap image inside Link */}
+          <img
+            src={require("../assets/lg.png")}
+            alt="Cherishables"
+            className="gallery-logo"
+          />
+        </Link>
+        <h1 className="gallery-title">Catalogue</h1>
         {products.map((category) => (
           <CategoryBlock
             key={category.mainCategory}

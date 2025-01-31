@@ -4,20 +4,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  /* Centers horizontally */
+  justify-content: flex-start;
+  /* Ensures no unnecessary vertical gaps */
+  text-align: center;
   width: 100%;
-  margin-top: 2rem;
+  gap: 0;
+  /* Removes extra space */
 }
 
+.about-us-container img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0;
+  transition: transform 0.1s ease-in-out;
+  /* Smooth scaling effect */
+}
+
+.about-us-container img:hover {
+  transform: scale(1.2);
+  /* Increases size to 1.2x on hover */
+}
 .about-us-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 80%;
   max-width: 1200px;
-  padding: 40px 0;
   flex-direction: row;
-  /* Default layout for larger screens */
+  margin-top: 0;
+  /* Ensures no top margin */
 }
 
 .about-us-content h1 {
