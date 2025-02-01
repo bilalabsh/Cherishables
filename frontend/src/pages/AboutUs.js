@@ -10,14 +10,14 @@ const AboutUs = () => {
       <Navbar />
       <div className="about-us-container">
         <Link to="/">
-                  {" "}
-                  {/* Wrap image inside Link */}
-                  <img
-                    src={require("../assets/lg.png")}
-                    alt="Cherishables"
-                    className="aboutus-logo"
-                  />
-                </Link>
+          {" "}
+          {/* Wrap image inside Link */}
+          <img
+            src={require("../assets/lg.png")}
+            alt="Cherishables"
+            className="aboutus-logo"
+          />
+        </Link>
         <div className="about-us-content">
           <div className="text-section">
             <div className="text-section-upper">
@@ -28,6 +28,24 @@ const AboutUs = () => {
                 2003, we've captured hand and foot impressions to symbolize the
                 unbreakable bond of love.
               </p>
+              <div className="video-container">
+                <video
+                  controls
+                  style={{
+                    width: "100%",
+                    maxWidth: "500px",
+                    height: "auto",
+                    objectFit: "contain",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <source
+                    src="https://res.cloudinary.com/dqeakzmb5/video/upload/v1735826245/Snapinsta.app_video_8546D61B807673A3EEB85E1D38F6F0BF_video_dashinit_icjvwo.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
             <h2>Our Journey of Love</h2>
             <p>
@@ -68,24 +86,6 @@ const AboutUs = () => {
                   borderRadius: "10px",
                 }}
               />
-            </div>
-            <div className="video-container">
-              <video
-                controls
-                style={{
-                  width: "100%",
-                  maxWidth: "500px",
-                  height: "auto",
-                  objectFit: "contain",
-                  borderRadius: "10px",
-                }}
-              >
-                <source
-                  src="https://res.cloudinary.com/dqeakzmb5/video/upload/v1735826245/Snapinsta.app_video_8546D61B807673A3EEB85E1D38F6F0BF_video_dashinit_icjvwo.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
             </div>
           </div>
         </div>

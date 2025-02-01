@@ -3,6 +3,7 @@
     padding: 20px;
     background-size: cover;
 }
+
 .gallery-logo {
     display: block;
     width: 100%;
@@ -20,6 +21,7 @@
     transform: scale(1.1);
     /* Increases size on hover */
 }
+
 .gallery-title {
     font-family: 'Georgia', serif;
     font-size: 2rem;
@@ -50,37 +52,50 @@
 }
 
 /* Product Card Styling */
-.product-card {
+.product-card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background: white;
     overflow: hidden;
     width: 250px;
+    height: 310px;
     text-align: center;
     transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 310px;
-    /* Increased height to fit the text below the image */
+    padding: 15px;
+    /* Add some padding */
+    text-decoration: none;
 }
 
-.product-card:hover {
+.product-card2:hover {
     transform: translateY(-5px);
 }
 
+/* Product Image */
 .product-image {
-    width: 100%;
-    height: 250px;
+    max-width: 100%;
+    height: 200px;
+    /* Adjust height */
     object-fit: contain;
-    display: block;
+    /* Keep proportions */
+    margin-bottom: 10px;
+    /* Space between image and text */
 }
 
+/* Product Info */
 .product-info {
-    padding: 10px;
-    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center text */
+    justify-content: center;
     flex-grow: 1;
-    /* Ensures the text stays below the image */
+    /* Allow text to occupy remaining space */
 }
 
 .product-name {
@@ -89,6 +104,7 @@
     color: #333;
     margin: 0;
     word-wrap: break-word;
+    text-decoration: none;
 }
 
 /* Loading Container */
@@ -152,7 +168,7 @@
 
 /* Small screens (phones) */
 @media (max-width: 575.98px) {
-    .product-card {
+    .product-card2 {
         width: 90%;
         height: 320px;
         /* Adjusted for smaller screens */
@@ -169,7 +185,7 @@
 
 /* Medium screens (small tablets) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .product-card {
+    .product-card2 {
         width: 45%;
         height: 320px;
     }
@@ -185,7 +201,7 @@
 
 /* Large screens (tablets) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .product-card {
+    .product-card2 {
         width: 30%;
         height: 330px;
     }
@@ -197,7 +213,7 @@
 
 /* Extra-large screens (laptops) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    .product-card {
+    .product-card2 {
         width: 25%;
         height: 340px;
     }
@@ -209,7 +225,7 @@
 
 /* Ultra-wide screens (desktops) */
 @media (min-width: 1200px) {
-    .product-card {
+    .product-card2 {
         width: 20%;
         height: 350px;
     }

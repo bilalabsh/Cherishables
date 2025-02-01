@@ -86,7 +86,7 @@ const ProductCard = ({ product }) => {
   const { name, image } = product;
 
   return (
-    <div className="product-card">
+    <div className="product-card2">
       <img className="product-image" src={image} alt={name} />
       <div className="product-info">
         <h3 className="product-name">{name}</h3>

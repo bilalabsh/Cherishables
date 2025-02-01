@@ -29,11 +29,13 @@ const ProductPage = () => {
   }, [productId]);
 
   const toggleCategory = (category) => {
-    if (expandedCategory === category) {
-      setExpandedCategory(null); // Close the currently expanded category
-    } else {
-      setExpandedCategory(category); // Expand the clicked category
-    }
+    setExpandedCategory((prevCategory) =>
+      prevCategory === category ? null : category
+    );
+  };
+
+  const handleCardClick = (e) => {
+    e.currentTarget.querySelector(".card-back").classList.toggle("flipped");
   };
 
   if (loading) {
@@ -68,7 +70,11 @@ const ProductPage = () => {
                     isExpanded ? productData.subCategories[category].length : 3
                   )
                   .map((product) => (
-                    <div key={product.id} className="product-card">
+                    <div
+                      key={product.id}
+                      className="product-card"
+                      onClick={handleCardClick}
+                    >
                       <div className="card-inner">
                         {/* Front Side */}
                         <div className="card-front">
