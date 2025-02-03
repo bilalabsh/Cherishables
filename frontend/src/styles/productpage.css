@@ -88,7 +88,7 @@ h2 {
     transition: transform 0.8s ease-in-out;
 }
 
-.product-card:hover .card-inner {
+.card-inner.flipped {
     transform: rotateY(180deg);
 }
 

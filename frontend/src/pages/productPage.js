@@ -35,9 +35,9 @@ const ProductPage = () => {
   };
 
   const handleCardClick = (e) => {
-    e.currentTarget.querySelector(".card-back").classList.toggle("flipped");
+    const cardInner = e.currentTarget.querySelector(".card-inner");
+    cardInner.classList.toggle("flipped");
   };
-
   if (loading) {
     return (
       <div className="loading-container">
