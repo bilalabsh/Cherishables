@@ -23,7 +23,9 @@
     padding: 0;
     flex-shrink: 0;
 }
-
+.text-section h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
 .hero-section h1 {
     font-family: 'Raleway-Bold';
     font-size: 4rem;
@@ -100,13 +102,13 @@
     color: #fff;
     font-size: 1rem;
     text-align: center;
-    padding: 0;
+    padding: 5px 0;
     overflow: hidden;
     white-space: nowrap;
     position: sticky;
-    top: 0;
+    top: 60px;
+    /* Adjust this value based on your navbar height */
     z-index: 999;
-    
 }
 
 .order-now-button {
@@ -138,7 +140,7 @@
 .scrolling-text p {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 25s linear infinite;
 }
 
 
@@ -155,12 +157,12 @@
 /* Keyframes for smooth scrolling */
 @keyframes scroll-left {
     0% {
-        transform: translateX(250%);
+        transform: translateX(140%);
         
     }
 
     100% {
-        transform: translateX(-250%);
+        transform: translateX(-140%);
     }
 }
 /* Media Queries */
@@ -188,13 +190,13 @@
                 .scrolling-text p {
                     display: inline-block;
                     white-space: nowrap;
-                    animation: scroll-left-mobile 10s linear infinite;
+                    animation: scroll-left-mobile 25s linear infinite;
                     /* Faster scrolling for smaller screens */
                 }
         
                 @keyframes scroll-left-mobile {
                     100% {
-                        transform: translateX(-120%);
+                        transform: translateX(-100%);
                         /* Start completely off the right */
                     }
         

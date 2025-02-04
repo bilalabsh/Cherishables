@@ -54,6 +54,14 @@ const ProductPage = () => {
   return (
     <div>
       <Navbar />
+      <div className="scrolling-text">
+        <p>
+          Introducing in Pakistan, your family own hand and foot impressions in
+          metal
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; Please contact us for your personalized impressions
+        </p>
+      </div>
       <div className="product-page-container">
         <h1>{productData.mainCategory} Products</h1>
         {Object.keys(productData.subCategories).map((category) => {
